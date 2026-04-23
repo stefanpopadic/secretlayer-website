@@ -17,7 +17,7 @@ export default function Home() {
       <Section variant="ink" className="pt-28 lg:pt-36 pb-24 lg:pb-32 overflow-hidden">
         <GridBg variant="dark" />
         <div className="relative">
-          <BrandBar label="Secret Layer" number="The warm-up layer" className="mb-16" />
+          <BrandBar label="Secret Layer" number="The warm-up layer" className="mb-5" />
           <Display className="max-w-[1200px]">
             The <em>middle</em> of your funnel <br className="hidden lg:block" />
             B2B companies are <em>missing</em>.
@@ -108,7 +108,7 @@ export default function Home() {
 
       {/* 3. Math — 100 visitors */}
       <Section variant="ink">
-        <BrandBar label="The math" number="02 / 12" className="mb-10" />
+        <BrandBar label="The math" number="02 / 12" className="mb-4" />
         <MidHeadline className="max-w-[900px]">
           100 visitors hit your site. <em>1</em> buys. <em>99</em> leave.
         </MidHeadline>
@@ -139,7 +139,7 @@ export default function Home() {
 
       {/* 4. Warm-up engagement */}
       <Section variant="cream">
-        <BrandBar label="What warms them up" number="03 / 12" variant="cream" className="mb-10" />
+        <BrandBar label="What warms them up" number="03 / 12" variant="cream" className="mb-4" />
         <Headline className="max-w-[1000px]">
           Give the 99 a reason to <em>stay</em>. Then a reason to <em>come back</em>.
         </Headline>
@@ -184,7 +184,7 @@ export default function Home() {
       <Section variant="ink">
         <GridBg variant="dark" />
         <div className="relative">
-          <BrandBar label="Scaled math" number="04 / 12" className="mb-10" />
+          <BrandBar label="Scaled math" number="04 / 12" className="mb-4" />
           <Headline className="max-w-[1000px]">
             1,000 visitors / month. Without us: <em>10 buyers</em>. With us: <em>60+</em>.
           </Headline>
@@ -213,7 +213,7 @@ export default function Home() {
 
       {/* 6. Side-by-side table */}
       <Section variant="cream">
-        <BrandBar label="The shift" number="05 / 12" variant="cream" className="mb-10" />
+        <BrandBar label="The shift" number="05 / 12" variant="cream" className="mb-4" />
         <Headline className="max-w-[960px]">
           What your funnel looks like, <em>before</em> and <em>after</em>.
         </Headline>
@@ -248,7 +248,7 @@ export default function Home() {
 
       {/* 7. Value-first methodology */}
       <Section variant="ink">
-        <BrandBar label="Our method" number="06 / 12" className="mb-10" />
+        <BrandBar label="Our method" number="06 / 12" className="mb-4" />
         <Headline className="max-w-[960px]">
           Every page earns its place by <em>giving value</em> first.
         </Headline>
@@ -301,7 +301,7 @@ export default function Home() {
 
       {/* 8. What we build */}
       <Section variant="charcoal">
-        <BrandBar label="The build" number="07 / 12" className="mb-10" />
+        <BrandBar label="The build" number="07 / 12" className="mb-4" />
         <Headline className="max-w-[1000px]">
           One bundled build. <em>Twelve months</em>. Two humans + AI.
         </Headline>
@@ -406,7 +406,7 @@ export default function Home() {
       <Section variant="cream">
         <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-end mb-16">
           <div>
-            <BrandBar label="Pricing" number="09 / 12" variant="cream" className="mb-8" />
+            <BrandBar label="Pricing" number="09 / 12" variant="cream" className="mb-4" />
             <Headline>
               Priced on <em>fit</em>. Not on tiers.
             </Headline>
@@ -481,7 +481,7 @@ export default function Home() {
 
       {/* 11. Tool showcase */}
       <Section variant="ink">
-        <BrandBar label="Free tools" number="10 / 12" className="mb-10" />
+        <BrandBar label="Free tools" number="10 / 12" className="mb-4" />
         <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-end mb-16">
           <Headline className="max-w-[900px]">
             Try the <em>same tools</em> we build for our clients.

@@ -30,7 +30,7 @@ export default function ArticlesPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="Articles" number={`${articles.length} pieces`} className="mb-16" />
+          <BrandBar label="Articles" number={`${articles.length} pieces`} className="mb-5" />
           <Display>
             Essays from the <em>bench</em>.
           </Display>

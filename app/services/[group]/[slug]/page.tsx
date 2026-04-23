@@ -121,7 +121,7 @@ export default async function SubpagePage({ params }: Params) {
 
       {/* What it is */}
       <Section variant="cream" className="py-24 lg:py-32">
-        <BrandBar label="What it is" number="01 / 05" variant="cream" className="mb-10" />
+        <BrandBar label="What it is" number="01 / 05" variant="cream" className="mb-4" />
         <Headline className="max-w-[960px] mb-12">
           The short <em>version</em>.
         </Headline>
@@ -139,7 +139,7 @@ export default async function SubpagePage({ params }: Params) {
 
       {/* What's included */}
       <Section variant="ink">
-        <BrandBar label="What's included" number="02 / 05" className="mb-10" />
+        <BrandBar label="What's included" number="02 / 05" className="mb-4" />
         <Headline className="max-w-[960px] mb-12">
           Everything in the <em>scope</em>.
         </Headline>
@@ -157,7 +157,7 @@ export default async function SubpagePage({ params }: Params) {
 
       {/* Deliverables */}
       <Section variant="charcoal">
-        <BrandBar label="Deliverables" number="03 / 05" className="mb-10" />
+        <BrandBar label="Deliverables" number="03 / 05" className="mb-4" />
         <Headline className="max-w-[960px] mb-12">
           What you <em>receive</em>.
         </Headline>
@@ -178,7 +178,7 @@ export default async function SubpagePage({ params }: Params) {
 
       {/* How it fits */}
       <Section variant="cream">
-        <BrandBar label="How it fits the funnel" number="04 / 05" variant="cream" className="mb-10" />
+        <BrandBar label="How it fits the funnel" number="04 / 05" variant="cream" className="mb-4" />
         <Headline className="max-w-[1000px] mb-10">
           Why this <em>matters</em> for the middle.
         </Headline>
@@ -189,7 +189,7 @@ export default async function SubpagePage({ params }: Params) {
 
       {/* FAQ */}
       <Section variant="ink">
-        <BrandBar label="FAQ" number="05 / 05" className="mb-10" />
+        <BrandBar label="FAQ" number="05 / 05" className="mb-4" />
         <Headline className="mb-16">Common questions.</Headline>
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-[1200px]">
           {sub.faqs.map((faq) => (
@@ -203,7 +203,7 @@ export default async function SubpagePage({ params }: Params) {
 
       {/* Related / next */}
       <Section variant="charcoal">
-        <BrandBar label="Next" number="Keep reading" className="mb-10" />
+        <BrandBar label="Next" number="Keep reading" className="mb-4" />
         <div className="grid md:grid-cols-2 gap-5">
           <Link
             href={`/services/${group.slug}`}

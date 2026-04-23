@@ -30,7 +30,7 @@ export default function ResourcesPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="Resources" number="Tools · Library · Articles · Cases" className="mb-16" />
+          <BrandBar label="Resources" number="Tools · Library · Articles · Cases" className="mb-5" />
           <Display>
             The working <em>playbook</em>, <br />
             public.
@@ -54,7 +54,7 @@ export default function ResourcesPage() {
       <Section variant="cream" id="tools">
         <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-end mb-12">
           <div>
-            <BrandBar label="Tools" number="01 / 04" variant="cream" className="mb-6" />
+            <BrandBar label="Tools" number="01 / 04" variant="cream" className="mb-3" />
             <Headline>
               Free <em>interactive tools</em>.
             </Headline>
@@ -89,7 +89,7 @@ export default function ResourcesPage() {
       <Section variant="ink" id="library">
         <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-end mb-12">
           <div>
-            <BrandBar label="Library" number="02 / 04" className="mb-6" />
+            <BrandBar label="Library" number="02 / 04" className="mb-3" />
             <Headline>
               <em>Lead magnets</em> we use ourselves.
             </Headline>
@@ -126,7 +126,7 @@ export default function ResourcesPage() {
       <Section variant="cream" id="articles">
         <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-end mb-12">
           <div>
-            <BrandBar label="Articles" number="03 / 04" variant="cream" className="mb-6" />
+            <BrandBar label="Articles" number="03 / 04" variant="cream" className="mb-3" />
             <Headline>
               From the <em>bench</em>.
             </Headline>
@@ -167,7 +167,7 @@ export default function ResourcesPage() {
 
       {/* Case studies */}
       <Section variant="ink" id="case-studies">
-        <BrandBar label="Case studies" number="04 / 04" className="mb-6" />
+        <BrandBar label="Case studies" number="04 / 04" className="mb-3" />
         <Headline className="max-w-[1000px] mb-8">
           Case studies <em>ship Q3 2026</em>.
         </Headline>

@@ -46,7 +46,7 @@ export default function CaseStudiesPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="Case studies" number="Ship Q3 2026" className="mb-16" />
+          <BrandBar label="Case studies" number="Ship Q3 2026" className="mb-5" />
           <Display>
             Receipts ship <br />
             <em>Q3 2026</em>.
@@ -67,7 +67,7 @@ export default function CaseStudiesPage() {
       </Section>
 
       <Section variant="cream">
-        <BrandBar label="In-flight builds" number="Active engagements" variant="cream" className="mb-10" />
+        <BrandBar label="In-flight builds" number="Active engagements" variant="cream" className="mb-4" />
         <Headline className="max-w-[900px] mb-16">
           What&apos;s <em>being built</em>.
         </Headline>

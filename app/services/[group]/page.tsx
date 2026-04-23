@@ -106,7 +106,7 @@ export default async function GroupPage({ params }: Params) {
 
       {/* How it fits */}
       <Section variant="ink">
-        <BrandBar label="How this group fits" number="Why bundled" className="mb-10" />
+        <BrandBar label="How this group fits" number="Why bundled" className="mb-4" />
         <Headline className="max-w-[1000px]">
           {group.title} is <em>one-third</em> of the warm-up layer.
         </Headline>

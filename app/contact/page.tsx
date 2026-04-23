@@ -28,7 +28,7 @@ export default function ContactPage() {
         <GridBg />
         <div className="relative grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
-            <BrandBar label="Contact" className="mb-16" />
+            <BrandBar label="Contact" className="mb-5" />
             <Display>
               <em>Let&apos;s</em> see if <br />
               we&apos;re a <em>fit</em>.
@@ -102,7 +102,7 @@ export default function ContactPage() {
 
       {/* FAQ */}
       <Section variant="ink">
-        <BrandBar label="Before you book" number="Quick check" className="mb-10" />
+        <BrandBar label="Before you book" number="Quick check" className="mb-4" />
         <Headline className="mb-16">Is Secret Layer a fit?</Headline>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {[

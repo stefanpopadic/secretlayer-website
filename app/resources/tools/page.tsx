@@ -30,7 +30,7 @@ export default function ToolsIndexPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="Tools" number={`${tools.length} free tools`} className="mb-16" />
+          <BrandBar label="Tools" number={`${tools.length} free tools`} className="mb-5" />
           <Display>
             Run the <em>same tools</em> <br />
             we run for <em>clients</em>.

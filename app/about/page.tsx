@@ -48,7 +48,7 @@ export default function AboutPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="About" number="The team" className="mb-16" />
+          <BrandBar label="About" number="The team" className="mb-5" />
           <Display>
             Two humans. <em>One AI</em>. <br />
             The warm-up <em>layer</em>.
@@ -71,7 +71,7 @@ export default function AboutPage() {
 
       {/* Founders */}
       <Section variant="cream">
-        <BrandBar label="Founders" number="01 / 04" variant="cream" className="mb-12" />
+        <BrandBar label="Founders" number="01 / 04" variant="cream" className="mb-5" />
         <div className="grid lg:grid-cols-2 gap-12">
           {[
             {
@@ -99,7 +99,7 @@ export default function AboutPage() {
 
       {/* Operating model */}
       <Section variant="ink">
-        <BrandBar label="Operating model" number="02 / 04" className="mb-10" />
+        <BrandBar label="Operating model" number="02 / 04" className="mb-4" />
         <Headline className="max-w-[900px]">
           Two humans and an AI layer. <em>No agency overhead.</em>
         </Headline>
@@ -141,7 +141,7 @@ export default function AboutPage() {
 
       {/* Why we guarantee */}
       <Section variant="charcoal">
-        <BrandBar label="Why we guarantee" number="03 / 04" className="mb-10" />
+        <BrandBar label="Why we guarantee" number="03 / 04" className="mb-4" />
         <Headline className="max-w-[960px]">
           Because billing for <em>effort</em> is a broken model.
         </Headline>
@@ -163,7 +163,7 @@ export default function AboutPage() {
 
       {/* Counter-positioning */}
       <Section variant="cream">
-        <BrandBar label="What we are not" number="04 / 04" variant="cream" className="mb-10" />
+        <BrandBar label="What we are not" number="04 / 04" variant="cream" className="mb-4" />
         <Headline className="max-w-[960px]">
           Half of clarity is saying <em>no</em>. Here&apos;s the list.
         </Headline>
@@ -215,7 +215,7 @@ export default function AboutPage() {
 
       {/* FAQ */}
       <Section variant="ink">
-        <BrandBar label="FAQ" number="Answers" className="mb-10" />
+        <BrandBar label="FAQ" number="Answers" className="mb-4" />
         <Headline className="mb-16">What people ask us.</Headline>
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {faqs.map((faq) => (

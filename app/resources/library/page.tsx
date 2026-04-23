@@ -29,7 +29,7 @@ export default function LibraryPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="Library" number={`${magnets.length} magnets · All free`} className="mb-16" />
+          <BrandBar label="Library" number={`${magnets.length} magnets · All free`} className="mb-5" />
           <Display>
             Our <em>operating manual</em>, <br />
             public.

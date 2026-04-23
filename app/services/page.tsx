@@ -29,7 +29,7 @@ export default function ServicesPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="Services" number="15 disciplines · 3 groups" className="mb-16" />
+          <BrandBar label="Services" number="15 disciplines · 3 groups" className="mb-5" />
           <Display>
             The <em>middle layer</em>, <br />
             all fifteen parts of it.

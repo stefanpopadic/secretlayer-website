@@ -102,7 +102,7 @@ export default function PricingPage() {
         <GridBg />
         <div className="relative grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
-            <BrandBar label="Pricing" className="mb-16" />
+            <BrandBar label="Pricing" className="mb-5" />
             <Display>
               See if <em>this</em> <br />
               is for you.
@@ -128,7 +128,7 @@ export default function PricingPage() {
       <Section variant="cream" className="py-24 lg:py-32">
         <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-end mb-16">
           <div>
-            <BrandBar label="How it works" number="Three steps" variant="cream" className="mb-8" />
+            <BrandBar label="How it works" number="Three steps" variant="cream" className="mb-4" />
             <Headline className="max-w-[960px]">
               A fit check. <em>Your</em> numbers. Your ROI.
             </Headline>
@@ -171,7 +171,7 @@ export default function PricingPage() {
 
       {/* What's inside (no prices) */}
       <Section variant="ink">
-        <BrandBar label="What's inside" number="One bundle" className="mb-10" />
+        <BrandBar label="What's inside" number="One bundle" className="mb-4" />
         <Headline className="max-w-[1000px] mb-12">
           All fifteen disciplines. <em>One</em> engagement.
         </Headline>
@@ -211,7 +211,7 @@ export default function PricingPage() {
 
       {/* Guarantee */}
       <Section variant="charcoal" className="overflow-hidden">
-        <BrandBar label="The guarantee" number="Priced on outcomes" className="mb-10" />
+        <BrandBar label="The guarantee" number="Priced on outcomes" className="mb-4" />
         <Headline className="max-w-[1100px]">
           We carry the <em>risk</em>. Not you.
         </Headline>
@@ -244,7 +244,7 @@ export default function PricingPage() {
 
       {/* Qualifier form */}
       <Section variant="ink" id="qualifier" className="py-24 lg:py-32">
-        <BrandBar label="The fit check" number="7 questions · 2 min" className="mb-10" />
+        <BrandBar label="The fit check" number="7 questions · 2 min" className="mb-4" />
         <MidHeadline className="max-w-[900px] mb-10">
           Answer seven questions. See your <em>fit</em> — and your ROI.
         </MidHeadline>
@@ -253,7 +253,7 @@ export default function PricingPage() {
 
       {/* FAQ */}
       <Section variant="cream">
-        <BrandBar label="FAQ" number="Common questions" variant="cream" className="mb-10" />
+        <BrandBar label="FAQ" number="Common questions" variant="cream" className="mb-4" />
         <Headline className="mb-16">Before you ask.</Headline>
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {faqs.map((faq) => (

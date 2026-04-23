@@ -74,7 +74,7 @@ export default async function ToolPage({ params }: Params) {
 
       {/* How it works */}
       <Section variant="cream">
-        <BrandBar label="How it works" number="01 / 02" variant="cream" className="mb-10" />
+        <BrandBar label="How it works" number="01 / 02" variant="cream" className="mb-4" />
         <Headline className="max-w-[900px]">
           Three <em>steps</em>. No catch.
         </Headline>
@@ -98,7 +98,7 @@ export default async function ToolPage({ params }: Params) {
 
       {/* Want the real thing? */}
       <Section variant="charcoal">
-        <BrandBar label="Beyond the tool" number="02 / 02" className="mb-10" />
+        <BrandBar label="Beyond the tool" number="02 / 02" className="mb-4" />
         <Headline className="max-w-[1000px]">
           The tool is the <em>starter kit</em>. <br />
           The layer is what <em>works</em>.
