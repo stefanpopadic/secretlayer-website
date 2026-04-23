@@ -93,10 +93,10 @@ const steps: Step[] = [
   },
   {
     key: "email",
-    eyebrow: "Your results",
-    question: "Where should we send your funnel math?",
+    eyebrow: "Your fit report",
+    question: "Where should we send your fit report?",
     helper:
-      "You'll see your results on the next screen instantly. We'll also email you a copy so you can share it with your team.",
+      "You'll see your fit report on the next screen instantly. We'll also email you a copy so you can share it with your team.",
     type: "emailBlock",
   },
 ];
@@ -304,11 +304,11 @@ export function PricingQualifier() {
               disabled={submitting || !answers.email || !answers.name}
               className="self-start inline-flex items-center gap-2 px-7 py-4 text-[15px] font-medium rounded-[3px] bg-flame text-ink hover:bg-flame-dark hover:text-bone border border-flame hover:border-flame-dark disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
             >
-              {submitting ? "Calculating…" : "Show my results →"}
+              {submitting ? "Running the math…" : "Show my fit report →"}
             </button>
             <p className="text-[12px] leading-[1.5] text-bone/50">
-              No spam. We send one email with your results and a short note on next steps. You can
-              reply directly to that email if you want to talk.
+              No spam. We send one email with your fit report and a short note on next steps. You
+              can reply directly to that email if you want to talk.
             </p>
           </form>
         )}
@@ -408,142 +408,285 @@ function currency(n: number) {
   return `$${Math.round(n)}`;
 }
 
+const modules = [
+  {
+    group: "Web Strategy",
+    items: [
+      "Conversion Strategy",
+      "Website Design",
+      "Webflow Development",
+      "Interactive AI Tools",
+      "Lead Magnets",
+    ],
+  },
+  {
+    group: "Growth Strategy",
+    items: [
+      "SEO Strategy",
+      "AEO Strategy",
+      "Social Media Strategy",
+      "Content Marketing",
+      "Email Marketing",
+    ],
+  },
+  {
+    group: "AI Automation",
+    items: [
+      "Analytics & Attribution",
+      "Workflow Automations",
+      "AI Agents",
+      "Content Automation",
+      "Integrations & APIs",
+    ],
+  },
+];
+
 function Results({ answers, results }: { answers: Answers; results: Computed }) {
   const firstName = answers.name.split(" ")[0] || "there";
-  const hasUpside = results.projectedPipelineAnnual > 0;
+  const hasUpside = results.projectedPipelineAnnual > 0 && results.deal > 0 && results.visitors > 0;
+  const notAFit =
+    answers.revenue === "Pre-revenue" || (results.visitors > 0 && results.visitors < 500);
 
   return (
-    <div className="flex flex-col gap-12 max-w-[1100px]">
-      {/* Intro */}
-      <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-16 max-w-[1100px]">
+      {/* A · Fit verdict */}
+      <div className="flex flex-col gap-5">
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
-          Your funnel math
+          Your fit report
         </span>
-        <h3 className="font-serif text-[clamp(2rem,5vw,4rem)] leading-[100%] tracking-[-0.03em]">
-          {firstName}, here&apos;s what your <em className="italic">middle</em> is worth.
-        </h3>
-        <p className="text-[17px] leading-[1.55] text-bone/70 max-w-[680px]">
-          Based on your {results.visitors.toLocaleString()} monthly visitors, {currency(results.deal)}{" "}
-          average deal, and {(results.closeRate * 100).toFixed(0)}% close rate. Conservative
-          industry benchmarks — we don&apos;t inflate the math.
-        </p>
+        {notAFit ? (
+          <>
+            <h3 className="font-serif text-[clamp(2rem,5vw,4rem)] leading-[100%] tracking-[-0.03em]">
+              {firstName}, Secret Layer <em className="italic">isn&apos;t a fit</em> — yet.
+            </h3>
+            <p className="text-[17px] leading-[1.55] text-bone/70 max-w-[720px]">
+              Secret Layer is built for B2B companies past the $500K ARR mark with real traffic
+              coming in. You&apos;re earlier than that. Come back post-seed or once you&apos;re
+              sending 500+ visitors / month — the math works then. In the meantime, a simpler
+              landing page + one solid lead magnet is the right move.
+            </p>
+          </>
+        ) : (
+          <>
+            <h3 className="font-serif text-[clamp(2rem,5vw,4rem)] leading-[100%] tracking-[-0.03em]">
+              {firstName}, Secret Layer <em className="italic">fits</em>.
+            </h3>
+            <p className="text-[17px] leading-[1.55] text-bone/70 max-w-[720px]">
+              Your numbers clear the thresholds we look for:{" "}
+              {results.visitors.toLocaleString()} monthly visitors, {currency(results.deal)} average
+              deal, {(results.closeRate * 100).toFixed(0)}% close rate. That means the 99% of your
+              traffic leaving unconverted is a real pool — and we can go get it.
+            </p>
+          </>
+        )}
       </div>
 
-      {/* Current vs Projected */}
-      <div className="grid lg:grid-cols-2 gap-5">
-        <div className="border border-bone/10 rounded-[4px] p-8 lg:p-10 bg-ink flex flex-col gap-5">
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-bone/55">
-            Today · without Secret Layer
-          </span>
-          <div>
-            <p className="font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[100%] tracking-[-0.025em]">
-              {currency(results.currentPipelineAnnual)}
-            </p>
-            <p className="text-[14px] text-bone/55 mt-2">annual closed pipeline from your site</p>
-          </div>
-          <div className="border-t border-bone/10 pt-5 flex flex-col gap-2 text-[14px] text-bone/70">
-            <Row label="Monthly qualified leads" value={results.currentLeadsPerMonth.toFixed(1)} />
-            <Row label="Industry-standard conversion" value="~1% of traffic" />
-            <Row label="The 99% that leave" value="Never come back" />
-          </div>
-        </div>
-        <div className="border border-flame/40 bg-flame/[0.06] rounded-[4px] p-8 lg:p-10 flex flex-col gap-5">
+      {/* B · Year one value anchor */}
+      {hasUpside && !notAFit && (
+        <div className="flex flex-col gap-5">
           <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
-            12 months · with Secret Layer
+            Year one · with Secret Layer
           </span>
-          <div>
-            <p className="font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[100%] tracking-[-0.025em] text-flame">
-              +{currency(results.projectedPipelineAnnual)}
-            </p>
-            <p className="text-[14px] text-bone/65 mt-2">
-              additional annual pipeline, on top of what you close today
-            </p>
+          <p className="font-serif text-[clamp(3.5rem,9vw,7rem)] leading-[90%] tracking-[-0.035em] text-flame">
+            +{currency(results.projectedPipelineAnnual)}
+          </p>
+          <p className="font-serif text-[clamp(1.25rem,2vw,1.5rem)] leading-[1.2] tracking-[-0.02em] text-bone/85">
+            additional pipeline · year one
+          </p>
+          <p className="text-[15px] text-bone/60 max-w-[680px]">
+            {Math.round(results.additionalLeadsAnnual).toLocaleString()} additional qualified leads
+            · {(results.closeRate * 100).toFixed(0)}% close rate · {currency(results.deal)} average
+            deal. Conservative benchmarks — we don&apos;t inflate the math.
+          </p>
+        </div>
+      )}
+
+      {/* C · Visual ROI comparison */}
+      {hasUpside && !notAFit ? (
+        <div className="flex flex-col gap-8 border border-bone/10 rounded-[4px] p-8 lg:p-12 bg-charcoal">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
+            The ROI · side-by-side
+          </span>
+          <div className="flex flex-col gap-5">
+            {/* Upside bar */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-baseline justify-between gap-4">
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-bone/70">
+                  Year 1 upside
+                </span>
+                <span className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] leading-[100%] tracking-[-0.02em] text-flame tabular-nums">
+                  +{currency(results.projectedPipelineAnnual)}
+                </span>
+              </div>
+              <div className="h-[28px] rounded-[3px] bg-flame w-full" />
+            </div>
+            {/* Investment bar */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-baseline justify-between gap-4">
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-bone/70">
+                  Your investment
+                </span>
+                <span className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] leading-[100%] tracking-[-0.02em] text-bone tabular-nums">
+                  {site.pricing.totalLabel}
+                </span>
+              </div>
+              <div
+                className="h-[28px] rounded-[3px] bg-bone/25"
+                style={{
+                  width: `${Math.max(4, Math.min(100, (results.investment / results.projectedPipelineAnnual) * 100))}%`,
+                }}
+              />
+            </div>
           </div>
-          <div className="border-t border-flame/30 pt-5 flex flex-col gap-2 text-[14px] text-bone/75">
-            <Row
-              label="Additional qualified leads / year"
-              value={Math.round(results.additionalLeadsAnnual).toLocaleString()}
-            />
-            <Row label="Capture rate on the 99%" value="~3% (conservative)" />
-            <Row label="Guarantee" value="10 qualified leads in 90 days" />
+          <div className="border-t border-bone/10 pt-8 flex flex-col gap-3">
+            <p className="font-serif text-[clamp(2rem,5vw,3.5rem)] leading-[100%] tracking-[-0.03em]">
+              <em className="italic text-flame">{results.roiMultiple.toFixed(1)}×</em> in year one.
+            </p>
+            <p className="text-[16px] leading-[1.55] text-bone/70 max-w-[620px]">
+              ${results.roiMultiple.toFixed(1)} of pipeline for every $1 invested. And Secret Layer
+              keeps producing after year one — the site, the tools, the content, the attribution
+              stack are all yours.
+            </p>
           </div>
         </div>
-      </div>
+      ) : !notAFit ? (
+        <div className="flex flex-col gap-4 border border-bone/10 rounded-[4px] p-8 bg-charcoal">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
+            We need real numbers
+          </span>
+          <p className="font-serif text-[clamp(1.25rem,2.5vw,1.75rem)] leading-[1.2] tracking-[-0.02em] text-bone/85 max-w-[640px]">
+            Reply to our email with real traffic + deal-size numbers and we&apos;ll run the ROI
+            math manually.
+          </p>
+        </div>
+      ) : null}
 
-      {/* The price reveal */}
-      <div className="border border-bone/10 rounded-[4px] p-8 lg:p-12 bg-charcoal flex flex-col gap-8">
-        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
-          The investment
-        </span>
-        <div className="grid lg:grid-cols-[auto_1fr] gap-10 items-center">
+      {/* D · What you get */}
+      {!notAFit && (
+        <div className="flex flex-col gap-8">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
+            Everything included
+          </span>
+          <p className="font-serif text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.1] tracking-[-0.025em] max-w-[860px]">
+            Fifteen disciplines. <em className="italic">One</em> engagement.
+          </p>
+          <div className="grid md:grid-cols-3 gap-5">
+            {modules.map((m) => (
+              <div
+                key={m.group}
+                className="border border-bone/10 rounded-[4px] p-6 flex flex-col gap-4"
+              >
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
+                  {m.group}
+                </span>
+                <ul className="flex flex-col gap-2">
+                  {m.items.map((i) => (
+                    <li key={i} className="text-[14px] text-bone/85 leading-[1.5]">
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="border-t border-bone/10 pt-6 grid md:grid-cols-2 gap-x-10 gap-y-3">
+            {[
+              "Weekly working sessions",
+              "Dedicated Slack channel",
+              "Monthly outcome reviews",
+              "90-day lead guarantee",
+              "Quarterly strategy resets",
+              "Full attribution dashboard",
+            ].map((item) => (
+              <div key={item} className="flex gap-3 text-[15px] text-bone/80">
+                <span className="mt-[8px] h-[3px] w-[3px] rounded-full bg-flame shrink-0" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* E · Investment reveal */}
+      {!notAFit && (
+        <div className="flex flex-col gap-8 border border-flame/40 bg-flame/[0.05] rounded-[4px] p-8 lg:p-12">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
+            The investment
+          </span>
           <div className="flex flex-col gap-3">
-            <p className="font-serif text-[clamp(3rem,7vw,6rem)] leading-[100%] tracking-[-0.03em]">
+            <p className="font-serif text-[clamp(3rem,8vw,6.5rem)] leading-[90%] tracking-[-0.035em]">
               {site.pricing.totalLabel}
             </p>
-            <p className="text-[14px] text-bone/55">12-month total investment</p>
+            <p className="text-[14px] text-bone/60">12-month total · same price for everyone</p>
           </div>
-          <div className="flex flex-col gap-5 border-l border-bone/10 pl-10 max-lg:border-l-0 max-lg:pl-0 max-lg:border-t max-lg:pt-8">
-            {hasUpside ? (
-              <>
-                <p className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.1] tracking-[-0.02em] text-bone/90">
-                  That&apos;s <em className="italic text-flame">{results.investmentAsPct.toFixed(0)}%</em>{" "}
-                  of the projected 12-month upside.
-                </p>
-                <p className="text-[16px] leading-[1.55] text-bone/65 max-w-[560px]">
-                  For every dollar you put into Secret Layer, we&apos;re projecting{" "}
-                  <strong className="text-bone">{results.roiMultiple.toFixed(1)}× back</strong> in
-                  additional annual pipeline. And if we miss 10 qualified leads at day 90, we work
-                  free. Miss at 180, full refund plus a {site.pricing.penaltyLabel} penalty.
-                </p>
-              </>
-            ) : (
-              <p className="font-serif text-[clamp(1.25rem,2.5vw,1.75rem)] leading-[1.2] tracking-[-0.02em] text-bone/80">
-                We need real traffic + deal-size numbers to run the ROI math. Reply to our email
-                with those and we&apos;ll run it manually.
+          {hasUpside && (
+            <p className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.15] tracking-[-0.02em] text-bone/90 max-w-[720px]">
+              That&apos;s{" "}
+              <em className="italic text-flame">{results.investmentAsPct.toFixed(0)}%</em> of
+              year-one upside. Secret Layer pays for itself before year one closes.
+            </p>
+          )}
+          <div className="grid md:grid-cols-3 gap-4 border-t border-flame/20 pt-8">
+            <Stat
+              label="Setup (one-time)"
+              value={site.pricing.setupLabel}
+              sub="50% kickoff · 50% on launch"
+            />
+            <Stat
+              label="Retainer"
+              value={site.pricing.retainerLabel}
+              sub="Billed every 28 days"
+            />
+            <Stat
+              label="Engagement"
+              value={site.pricing.engagement}
+              sub="Exit any quarter, 30d notice"
+            />
+          </div>
+          <div className="border-t border-flame/20 pt-8 grid sm:grid-cols-2 gap-5">
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
+                Day 90
+              </span>
+              <p className="text-[15px] leading-[1.5] text-bone/80">
+                10 qualified leads or we work free until we hit them.
               </p>
-            )}
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
+                Day 180
+              </span>
+              <p className="text-[15px] leading-[1.5] text-bone/80">
+                Still short? Full refund, plus a {site.pricing.penaltyLabel} penalty on top.
+              </p>
+            </div>
           </div>
         </div>
+      )}
 
-        <div className="grid md:grid-cols-3 gap-4 border-t border-bone/10 pt-8">
-          <Stat label="Setup (one-time)" value={site.pricing.setupLabel} sub="50% kickoff · 50% on launch" />
-          <Stat label="Retainer" value={site.pricing.retainerLabel} sub="Billed every 28 days" />
-          <Stat label="Engagement" value={site.pricing.engagement} sub="Exit any quarter, 30d notice" />
-        </div>
-      </div>
-
-      {/* CTA */}
+      {/* F · CTAs */}
       <div className="flex flex-col sm:flex-row gap-4 items-start">
         <a
           href={`mailto:${site.email}?subject=Secret%20Layer%20–%20${encodeURIComponent(
             answers.company || "Your project"
           )}&body=${encodeURIComponent(
-            `Hi — I just ran the funnel math on secretlayer.co and wanted to follow up.\n\nCompany: ${answers.company}\nMonthly visitors: ${answers.visitors}\nDeal size: $${answers.dealSize}\nClose rate: ${answers.closeRate}%\nTimeline: ${answers.timeline}\n\nLet's talk.`
+            `Hi — I just ran the fit report on secretlayer.co and wanted to follow up.\n\nCompany: ${answers.company}\nMonthly visitors: ${answers.visitors}\nDeal size: $${answers.dealSize}\nClose rate: ${answers.closeRate}%\nTimeline: ${answers.timeline}\n\nLet's talk.`
           )}`}
           className="inline-flex items-center gap-2 px-7 py-4 text-[15px] font-medium rounded-[3px] bg-flame text-ink hover:bg-flame-dark hover:text-bone border border-flame hover:border-flame-dark transition-colors"
         >
           Book the 20-min fit call →
         </a>
         <a
-          href="/resources/tools/funnel-audit"
+          href="/contact"
           className="inline-flex items-center gap-2 px-7 py-4 text-[15px] font-medium rounded-[3px] border border-bone/30 text-bone hover:border-bone hover:bg-bone hover:text-ink transition-colors"
         >
-          Run the free funnel audit
+          Get in touch
         </a>
       </div>
       <p className="text-[13px] leading-[1.55] text-bone/50 max-w-[680px]">
-        Your results are also in your inbox — check {answers.email} in the next few minutes. If
+        Your fit report is also in your inbox — check {answers.email} in the next few minutes. If
         you&apos;d rather reply to that email with questions, we read every one.
       </p>
-    </div>
-  );
-}
-
-function Row({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex items-baseline justify-between gap-4">
-      <span className="text-bone/55">{label}</span>
-      <span className="text-bone tabular-nums">{value}</span>
     </div>
   );
 }

@@ -10,16 +10,16 @@ import { site } from "@/lib/site";
 import { PricingQualifier } from "./PricingQualifier";
 
 export const metadata: Metadata = {
-  title: "What your funnel is worth",
+  title: "See if this is for you",
   description:
-    "Answer seven questions. See what the middle of your funnel is leaving on the table, and what it's worth to fix. 10 qualified leads in 90 days or we work free.",
+    "Two minutes. Seven questions. If it's a fit, you'll see what year one looks like with Secret Layer — and what it costs — on the same screen.",
 };
 
 const faqs = [
   {
     question: "Why don't you show the price up front?",
     answer:
-      "Because a number in isolation is meaningless. $80K is a lot — until you see it sits next to a projected 12-month upside several times larger. The calculator gives you that context first. Then the number lands as a percentage of upside, not a line item.",
+      "Because a number in isolation is meaningless. $80K is a lot — until you see it sits next to a projected 12-month upside several times larger. The fit check runs your numbers first, then shows the ROI side-by-side with the investment. The price lands as a percentage of upside, not a line item.",
   },
   {
     question: "Is the price the same for everyone?",
@@ -101,19 +101,18 @@ export default function PricingPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="Pricing" number="See what your middle is worth" className="mb-16" />
+          <BrandBar label="Pricing" number="See if this is for you" className="mb-16" />
           <Display>
-            See what your <em>middle</em> <br />
-            is worth.
+            See if <em>this</em> <br />
+            is for you.
           </Display>
           <Body size="xl" className="text-bone/75 mt-10 max-w-[760px]">
-            Answer seven questions. We&apos;ll calculate what the middle of your funnel is leaving
-            on the table today, what Secret Layer is projected to add over the next twelve months,
-            and what the investment looks like as a percentage of that upside.
+            Two minutes. Seven questions. If it&apos;s a fit, you&apos;ll see what year one looks
+            like with Secret Layer — and what it costs — on the same screen.
           </Body>
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
             <CTAButton href="#qualifier" size="lg">
-              Start the calculator →
+              See if this is for you →
             </CTAButton>
             <CTAButton href="/contact" variant="secondary" size="lg">
               Get in touch
@@ -128,7 +127,7 @@ export default function PricingPage() {
           <div>
             <BrandBar label="How it works" number="Three steps" variant="cream" className="mb-8" />
             <Headline className="max-w-[960px]">
-              Seven questions. <em>Your</em> numbers. Then ours.
+              A fit check. <em>Your</em> numbers. Your ROI.
             </Headline>
           </div>
           <PillTag variant="flame">Active · Taking 3 clients / Q</PillTag>
@@ -138,17 +137,17 @@ export default function PricingPage() {
             {
               num: "01",
               label: "Answer 7 questions",
-              body: "Revenue band, average deal size, monthly visitors, close rate, what's already on your site, timeline. One per screen. Five minutes.",
+              body: "Revenue band, average deal size, monthly visitors, close rate, what's already on your site, timeline. One per screen. Two minutes.",
             },
             {
               num: "02",
-              label: "See your math",
-              body: "Your current annual pipeline from existing traffic, against the additional pipeline a fixed middle-of-funnel layer is projected to produce over twelve months.",
+              label: "See your fit",
+              body: "Fit or not a fit — we tell you straight. If your numbers don't clear the thresholds, we say so and point you elsewhere. No pitch.",
             },
             {
               num: "03",
-              label: "See the price in context",
-              body: "Leave your email, see the investment framed as a percentage of the projected upside. Same price for everyone — the upside is what changes.",
+              label: "See the ROI side-by-side",
+              body: "Year-one upside and the investment on the same screen, with the ratio in plain English. Same price for everyone — the upside is what changes.",
             },
           ].map((s) => (
             <div
@@ -242,9 +241,9 @@ export default function PricingPage() {
 
       {/* Qualifier form */}
       <Section variant="ink" id="qualifier" className="py-24 lg:py-32">
-        <BrandBar label="The calculator" number="7 questions · 5 min" className="mb-10" />
+        <BrandBar label="The fit check" number="7 questions · 2 min" className="mb-10" />
         <MidHeadline className="max-w-[900px] mb-10">
-          Answer seven questions. See what your <em>middle</em> is worth.
+          Answer seven questions. See your <em>fit</em> — and your ROI.
         </MidHeadline>
         <PricingQualifier />
       </Section>
@@ -267,15 +266,15 @@ export default function PricingPage() {
       <Section variant="ink" className="py-24 lg:py-32">
         <div className="flex flex-col items-center text-center gap-8">
           <Display as="h2" className="max-w-[1000px]">
-            Still reading? <em>See your number.</em>
+            Still reading? <em>See your fit.</em>
           </Display>
           <Body size="lg" className="text-bone/70 max-w-[560px]">
-            Seven questions. Five minutes. The math and the investment, side by side. No call
+            Seven questions. Two minutes. Year-one upside and the investment, side by side. No call
             required until you want one.
           </Body>
           <div className="flex flex-col sm:flex-row gap-3">
             <CTAButton href="#qualifier" size="lg">
-              Start the calculator →
+              See if this is for you →
             </CTAButton>
             <CTAButton href="/contact" variant="secondary" size="lg">
               Get in touch
