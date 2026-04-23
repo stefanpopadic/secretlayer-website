@@ -56,6 +56,12 @@ html, body {
 }
 .headline em { font-style: italic; }
 
+/* Trim Instrument Serif's baked-in vertical leading so line-height renders visually tight */
+.font-serif {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
 .prose-body em { font-style: italic; }
 
 .grid-bg::before {
