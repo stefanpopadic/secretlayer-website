@@ -44,22 +44,23 @@ html, body {
   font-family: var(--font-serif);
   font-weight: 400;
   letter-spacing: -0.035em;
-  line-height: 0.92;
+  line-height: 1;
 }
-.display em { font-style: italic; }
+.display em { font-style: italic; line-height: 1; }
 
 .headline {
   font-family: var(--font-serif);
   font-weight: 400;
   letter-spacing: -0.03em;
-  line-height: 1.0;
+  line-height: 1;
 }
-.headline em { font-style: italic; }
+.headline em { font-style: italic; line-height: 1; }
 
-/* Trim Instrument Serif's baked-in vertical leading so line-height renders visually tight */
-.font-serif {
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+  line-height: 1;
 }
 
 .prose-body em { font-style: italic; }
