@@ -12,7 +12,7 @@ export function Display({ as: Tag = "h1", className, children }: DisplayProps) {
     <Tag
       className={cn(
         "font-display font-normal uppercase leading-[100%] tracking-[-0.035em]",
-        "text-[clamp(3.5rem,9vw,8.75rem)]",
+        "text-[clamp(2.8rem,7.2vw,7rem)]",
         "[&_em]:italic [&_em]:tracking-[-2px] [&_em]:leading-[100%]",
         className
       )}
@@ -27,7 +27,7 @@ export function Headline({ as: Tag = "h2", className, children }: DisplayProps) 
     <Tag
       className={cn(
         "font-display font-normal uppercase leading-[100%] tracking-[-0.03em]",
-        "text-[clamp(2.25rem,5.5vw,4.75rem)]",
+        "text-[clamp(1.8rem,4.4vw,3.8rem)]",
         "[&_em]:italic [&_em]:leading-[100%]",
         className
       )}
