@@ -7,8 +7,15 @@ export const site = {
     "We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution. 10 qualified leads in 90 days or we work free.",
   guarantee: "10 qualified leads in 90 days or we work free.",
   pricing: {
-    model: "One bundled engagement. Priced on fit, not on tiers.",
+    setup: 15000,
+    setupLabel: "$15,000",
+    retainer: 5000,
+    retainerLabel: "$5,000 / 28 days",
+    retainerCycles: 13,
+    total: 80000,
+    totalLabel: "$80,000",
     engagement: "12 months",
+    penaltyLabel: "$2,000",
   },
   founders: ["Stefan Popadic", "Nenad Popadic"],
   social: {

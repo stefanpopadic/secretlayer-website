@@ -10,21 +10,26 @@ import { site } from "@/lib/site";
 import { PricingQualifier } from "./PricingQualifier";
 
 export const metadata: Metadata = {
-  title: "Pricing",
+  title: "What your funnel is worth",
   description:
-    "Secret Layer is priced on fit, not on tiers. Answer ten questions — get your custom setup + retainer back within one business day. 10 qualified leads in 90 days or we work free.",
+    "Answer seven questions. See what the middle of your funnel is leaving on the table, and what it's worth to fix. 10 qualified leads in 90 days or we work free.",
 };
 
 const faqs = [
   {
-    question: "Why don't you publish prices?",
+    question: "Why don't you show the price up front?",
     answer:
-      "Because one public number doesn't fit a post-seed SaaS, a mid-market services firm, and a growth-stage B2B platform. Our setup and retainer flex with revenue band, deal size, and funnel shape. Answer the fit-check form and you get your real numbers — not a range.",
+      "Because a number in isolation is meaningless. $80K is a lot — until you see it sits next to a projected 12-month upside several times larger. The calculator gives you that context first. Then the number lands as a percentage of upside, not a line item.",
+  },
+  {
+    question: "Is the price the same for everyone?",
+    answer:
+      "Yes. One bundled engagement, one setup fee, one retainer cadence, 12 months. What changes between clients isn't the invoice — it's the upside. A company with more traffic and bigger deals has more middle-of-funnel revenue to recover. The calculator shows you yours.",
   },
   {
     question: "Why a 12-month engagement?",
     answer:
-      "Because the middle of the funnel is a compound asset. Month 1 is setup. Month 3 is the first guarantee checkpoint. Months 4–12 are where content, AEO, and nurture start actually producing. Anything shorter and we'd charge for setup without the payoff.",
+      "Because the middle of the funnel is a compound asset. Month 1 is setup. Month 3 is the first guarantee checkpoint. Months 4–12 are where content, AEO, and nurture actually compound. Anything shorter and we'd charge for setup without the payoff.",
   },
   {
     question: "What if I cancel?",
@@ -44,7 +49,7 @@ const faqs = [
   {
     question: "Can I just buy one service?",
     answer:
-      "No. The middle layer breaks when you buy one piece of it. If you only need one discipline (a website, an SEO audit), we're not the right fit — and we'll say so in reply to your fit check.",
+      "No. The middle layer breaks when you buy one piece of it. If you only need one discipline (a website, an SEO audit), we're not the right fit — and we'll say so.",
   },
 ];
 
@@ -96,22 +101,22 @@ export default function PricingPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="Pricing" number="Priced on fit" className="mb-16" />
+          <BrandBar label="Pricing" number="See what your middle is worth" className="mb-16" />
           <Display>
-            Priced on <em>fit</em>. <br />
-            Not on <em>tiers</em>.
+            See what your <em>middle</em> <br />
+            is worth.
           </Display>
-          <Body size="xl" className="text-bone/75 mt-10 max-w-[720px]">
-            One bundled engagement. One retainer cadence. One guarantee. The only thing that
-            changes is the setup + retainer number — and that&apos;s calibrated to your revenue,
-            deal size, and funnel stage.
+          <Body size="xl" className="text-bone/75 mt-10 max-w-[760px]">
+            Answer seven questions. We&apos;ll calculate what the middle of your funnel is leaving
+            on the table today, what Secret Layer is projected to add over the next twelve months,
+            and what the investment looks like as a percentage of that upside.
           </Body>
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
             <CTAButton href="#qualifier" size="lg">
-              Start the fit check →
+              Start the calculator →
             </CTAButton>
             <CTAButton href="/resources/tools/funnel-audit" variant="secondary" size="lg">
-              Audit your funnel first
+              Get a manual audit instead
             </CTAButton>
           </div>
         </div>
@@ -121,9 +126,9 @@ export default function PricingPage() {
       <Section variant="cream" className="py-24 lg:py-32">
         <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-end mb-16">
           <div>
-            <BrandBar label="How pricing works" number="Three steps" variant="cream" className="mb-8" />
+            <BrandBar label="How it works" number="Three steps" variant="cream" className="mb-8" />
             <Headline className="max-w-[960px]">
-              Custom numbers back within <em>one business day</em>.
+              Seven questions. <em>Your</em> numbers. Then ours.
             </Headline>
           </div>
           <PillTag variant="flame">Active · Taking 3 clients / Q</PillTag>
@@ -132,18 +137,18 @@ export default function PricingPage() {
           {[
             {
               num: "01",
-              label: "Fit check",
-              body: "Answer ten questions — revenue band, deal size, traffic, funnel shape, timeline. Takes five minutes.",
+              label: "Answer 7 questions",
+              body: "Revenue band, average deal size, monthly visitors, close rate, what's already on your site, timeline. One per screen. Five minutes.",
             },
             {
               num: "02",
-              label: "We assess",
-              body: "We review your answers, your site, and whether the model fits. If it doesn't, we say so and route you elsewhere.",
+              label: "See your math",
+              body: "Your current annual pipeline from existing traffic, against the additional pipeline a fixed middle-of-funnel layer is projected to produce over twelve months.",
             },
             {
               num: "03",
-              label: "You get your brief",
-              body: "Custom setup + retainer, what the 90-day guarantee looks like at your stage, and a recommended start date.",
+              label: "See the price in context",
+              body: "Leave your email, see the investment framed as a percentage of the projected upside. Same price for everyone — the upside is what changes.",
             },
           ].map((s) => (
             <div
@@ -237,9 +242,9 @@ export default function PricingPage() {
 
       {/* Qualifier form */}
       <Section variant="ink" id="qualifier" className="py-24 lg:py-32">
-        <BrandBar label="Fit check" number="Ten questions · 5 min" className="mb-10" />
+        <BrandBar label="The calculator" number="7 questions · 5 min" className="mb-10" />
         <MidHeadline className="max-w-[900px] mb-10">
-          Answer the fit check. Get your <em>custom pricing + 90-day plan</em> back by tomorrow.
+          Answer seven questions. See what your <em>middle</em> is worth.
         </MidHeadline>
         <PricingQualifier />
       </Section>
@@ -262,15 +267,15 @@ export default function PricingPage() {
       <Section variant="ink" className="py-24 lg:py-32">
         <div className="flex flex-col items-center text-center gap-8">
           <Display as="h2" className="max-w-[1000px]">
-            Still reading? <em>Run the fit check.</em>
+            Still reading? <em>See your number.</em>
           </Display>
-          <Body size="lg" className="text-bone/70 max-w-[520px]">
-            Five minutes in. Custom numbers back in one business day. No call required until you
-            want one.
+          <Body size="lg" className="text-bone/70 max-w-[560px]">
+            Seven questions. Five minutes. The math and the investment, side by side. No call
+            required until you want one.
           </Body>
           <div className="flex flex-col sm:flex-row gap-3">
             <CTAButton href="#qualifier" size="lg">
-              Start the fit check →
+              Start the calculator →
             </CTAButton>
             <CTAButton href="/resources/tools/funnel-audit" variant="secondary" size="lg">
               Audit your funnel
