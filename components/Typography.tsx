@@ -11,7 +11,7 @@ export function Display({ as: Tag = "h1", className, children }: DisplayProps) {
   return (
     <Tag
       className={cn(
-        "font-serif font-normal uppercase leading-[100%] tracking-[-0.035em]",
+        "font-display font-normal uppercase leading-[100%] tracking-[-0.035em]",
         "text-[clamp(3.5rem,9vw,8.75rem)]",
         "[&_em]:italic [&_em]:tracking-[-2px] [&_em]:leading-[100%]",
         className
@@ -26,7 +26,7 @@ export function Headline({ as: Tag = "h2", className, children }: DisplayProps) 
   return (
     <Tag
       className={cn(
-        "font-serif font-normal uppercase leading-[100%] tracking-[-0.03em]",
+        "font-display font-normal uppercase leading-[100%] tracking-[-0.03em]",
         "text-[clamp(2.25rem,5.5vw,4.75rem)]",
         "[&_em]:italic [&_em]:leading-[100%]",
         className
