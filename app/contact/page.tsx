@@ -26,16 +26,19 @@ export default function ContactPage() {
       {/* Hero */}
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
-        <div className="relative">
-          <BrandBar label="Contact" number="Start the conversation" className="mb-16" />
-          <Display>
-            <em>Let&apos;s</em> see if <br />
-            we&apos;re a <em>fit</em>.
-          </Display>
-          <Body size="xl" className="text-bone/75 mt-10 max-w-[640px]">
-            Tell us where you are. We&apos;ll respond within one business day with either a
-            calendar link — or an honest note that we&apos;re not the right match.
-          </Body>
+        <div className="relative grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center">
+          <div>
+            <BrandBar label="Contact" className="mb-16" />
+            <Display>
+              <em>Let&apos;s</em> see if <br />
+              we&apos;re a <em>fit</em>.
+            </Display>
+            <Body size="xl" className="text-bone/75 mt-10 max-w-[640px]">
+              Tell us where you are. We&apos;ll respond within one business day with either a
+              calendar link — or an honest note that we&apos;re not the right match.
+            </Body>
+          </div>
+          <div className="aspect-[4/5] lg:aspect-auto lg:h-[560px] w-full rounded-[4px] bg-bone/[0.04] border border-bone/10" />
         </div>
       </Section>
 

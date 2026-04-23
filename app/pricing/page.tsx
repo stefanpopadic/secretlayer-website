@@ -100,24 +100,27 @@ export default function PricingPage() {
       {/* Hero */}
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
-        <div className="relative">
-          <BrandBar label="Pricing" number="See if this is for you" className="mb-16" />
-          <Display>
-            See if <em>this</em> <br />
-            is for you.
-          </Display>
-          <Body size="xl" className="text-bone/75 mt-10 max-w-[760px]">
-            Two minutes. Seven questions. If it&apos;s a fit, you&apos;ll see what year one looks
-            like with Secret Layer — and what it costs — on the same screen.
-          </Body>
-          <div className="mt-10 flex flex-col sm:flex-row gap-3">
-            <CTAButton href="#qualifier" size="lg">
-              See if this is for you →
-            </CTAButton>
-            <CTAButton href="/contact" variant="secondary" size="lg">
-              Get in touch
-            </CTAButton>
+        <div className="relative grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center">
+          <div>
+            <BrandBar label="Pricing" className="mb-16" />
+            <Display>
+              See if <em>this</em> <br />
+              is for you.
+            </Display>
+            <Body size="xl" className="text-bone/75 mt-10 max-w-[760px]">
+              Two minutes. Seven questions. If it&apos;s a fit, you&apos;ll see what year one looks
+              like with Secret Layer — and what it costs — on the same screen.
+            </Body>
+            <div className="mt-10 flex flex-col sm:flex-row gap-3">
+              <CTAButton href="#qualifier" size="lg">
+                See if this is for you →
+              </CTAButton>
+              <CTAButton href="/contact" variant="secondary" size="lg">
+                Get in touch
+              </CTAButton>
+            </div>
           </div>
+          <div className="aspect-[4/5] lg:aspect-auto lg:h-[560px] w-full rounded-[4px] bg-bone/[0.04] border border-bone/10" />
         </div>
       </Section>
 
