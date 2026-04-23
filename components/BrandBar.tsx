@@ -8,18 +8,20 @@ type BrandBarProps = {
 };
 
 export function BrandBar({ label, className, variant = "dark" }: BrandBarProps) {
-  const labelColor = variant === "cream" ? "text-ink" : "text-flame";
-  const lineColor = variant === "cream" ? "bg-ink/15" : "bg-bone/15";
+  const pillColor =
+    variant === "cream"
+      ? "text-flame-dark border-flame-dark/50"
+      : "text-flame border-flame/60";
   return (
-    <div
-      className={cn(
-        "flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.22em] font-semibold",
-        labelColor,
-        className
-      )}
-    >
-      <span>{label}</span>
-      <span className={cn("h-[1px] flex-1", lineColor)} />
+    <div className={cn("flex", className)}>
+      <span
+        className={cn(
+          "inline-flex items-center rounded-full border px-3 py-1 font-mono text-[11px] uppercase tracking-[0.22em] font-semibold",
+          pillColor
+        )}
+      >
+        {label}
+      </span>
     </div>
   );
 }
