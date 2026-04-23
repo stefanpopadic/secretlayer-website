@@ -32,12 +32,12 @@ const jubilee = localFont({
   variable: "--font-jubilee",
   display: "swap",
   src: [
-    { path: "../public/fonts/OTJubilee-PlatinumRegular.woff2", weight: "400", style: "normal" },
-    { path: "../public/fonts/OTJubilee-PlatinumRegularItalic.woff2", weight: "400", style: "italic" },
-    { path: "../public/fonts/OTJubilee-PlatinumMedium.woff2", weight: "500", style: "normal" },
-    { path: "../public/fonts/OTJubilee-PlatinumMediumItalic.woff2", weight: "500", style: "italic" },
-    { path: "../public/fonts/OTJubilee-PlatinumBold.woff2", weight: "700", style: "normal" },
-    { path: "../public/fonts/OTJubilee-PlatinumBoldItalic.woff2", weight: "700", style: "italic" },
+    { path: "../public/fonts/OTJubilee-RubyRegular.woff2", weight: "400", style: "normal" },
+    { path: "../public/fonts/OTJubilee-RubyRegularItalic.woff2", weight: "400", style: "italic" },
+    { path: "../public/fonts/OTJubilee-RubyMedium.woff2", weight: "500", style: "normal" },
+    { path: "../public/fonts/OTJubilee-RubyMediumItalic.woff2", weight: "500", style: "italic" },
+    { path: "../public/fonts/OTJubilee-RubyBold.woff2", weight: "700", style: "normal" },
+    { path: "../public/fonts/OTJubilee-RubyBoldItalic.woff2", weight: "700", style: "italic" },
   ],
 });
 
