@@ -11,9 +11,9 @@ export function Display({ as: Tag = "h1", className, children }: DisplayProps) {
   return (
     <Tag
       className={cn(
-        "font-serif font-normal leading-[0.92] tracking-[-0.035em]",
+        "font-serif font-normal leading-[1.0] tracking-[-0.035em]",
         "text-[clamp(3.5rem,9vw,8.75rem)]",
-        "[&_em]:italic",
+        "[&_em]:italic [&_em]:uppercase [&_em]:tracking-[-2px] [&_em]:leading-[1.0]",
         className
       )}
     >
