@@ -199,7 +199,7 @@ export const serviceGroups: ServiceGroup[] = [
           {
             question: "Who pays for the API usage?",
             answer:
-              "You do, at cost. Typically $50–200/mo depending on volume. We bake it into the retainer if you'd rather not touch the infrastructure.",
+              "You do, at cost — usually a small monthly bill scaled to usage. We bake it into the retainer if you'd rather not touch the infrastructure yourself.",
           },
           {
             question: "What if the tool flops?",

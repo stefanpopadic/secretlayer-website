@@ -33,7 +33,7 @@ export default function Home() {
                 Audit Your Funnel →
               </CTAButton>
               <CTAButton href="/pricing" variant="secondary" size="lg">
-                See pricing
+                Run the fit check
               </CTAButton>
             </div>
           </div>
@@ -45,15 +45,15 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <Eyebrow>Setup</Eyebrow>
+              <Eyebrow>Team</Eyebrow>
               <p className="mt-2 font-serif text-[22px] leading-[1.2] tracking-[-0.015em]">
-                {site.pricing.setup}
+                2 humans + AI
               </p>
             </div>
             <div>
-              <Eyebrow>Retainer</Eyebrow>
+              <Eyebrow>Pricing</Eyebrow>
               <p className="mt-2 font-serif text-[22px] leading-[1.2] tracking-[-0.015em]">
-                {site.pricing.retainer}
+                Priced on fit
               </p>
             </div>
             <div>
@@ -376,14 +376,14 @@ export default function Home() {
           </Display>
           <Body size="xl" className="text-bone/75 max-w-[720px] mx-auto">
             Miss the mark at 90 days, we work free until we hit it. Miss it at 180 days, you get
-            a full refund plus a $2K penalty. The only warm-up agency priced on outcomes, not
+            a full refund plus a penalty on top. The only warm-up agency priced on outcomes, not
             hours.
           </Body>
           <div className="grid sm:grid-cols-3 gap-8 mt-8 text-left max-w-[900px] w-full">
             <div className="border-t border-bone/10 pt-5">
               <Eyebrow>Day 0</Eyebrow>
               <p className="mt-2 font-serif text-[24px] leading-[1.15] tracking-[-0.02em]">
-                Kickoff. $15K setup.
+                Kickoff. Setup starts.
               </p>
             </div>
             <div className="border-t border-flame/40 pt-5">
@@ -395,7 +395,7 @@ export default function Home() {
             <div className="border-t border-bone/10 pt-5">
               <Eyebrow>Day 180</Eyebrow>
               <p className="mt-2 font-serif text-[24px] leading-[1.15] tracking-[-0.02em]">
-                Still short? Full refund + $2K.
+                Still short? Full refund + penalty.
               </p>
             </div>
           </div>
@@ -408,11 +408,11 @@ export default function Home() {
           <div>
             <BrandBar label="Pricing" number="09 / 12" variant="cream" className="mb-8" />
             <Headline>
-              One price. <em>No tiers.</em> No surprises.
+              Priced on <em>fit</em>. Not on tiers.
             </Headline>
           </div>
           <CTAButton href="/pricing" variant="cream-secondary">
-            Full pricing →
+            Run the fit check →
           </CTAButton>
         </div>
         <div className="grid lg:grid-cols-3 gap-5">
@@ -445,35 +445,35 @@ export default function Home() {
             </div>
           </div>
           <div className="border border-ink/15 rounded-[4px] p-8 flex flex-col gap-6 bg-cream">
-            <Eyebrow>Investment</Eyebrow>
-            <div className="flex flex-col gap-4 border-t border-ink/10 pt-6">
+            <Eyebrow>How pricing works</Eyebrow>
+            <div className="flex flex-col gap-5 border-t border-ink/10 pt-6">
               <div>
                 <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/55">
-                  Setup
+                  Step 01
                 </div>
-                <div className="font-serif text-[44px] leading-none tracking-[-0.025em] mt-2">
-                  {site.pricing.setup}
-                </div>
+                <p className="font-serif text-[22px] leading-[1.15] tracking-[-0.02em] mt-2">
+                  Answer the fit check — ten questions, five minutes.
+                </p>
               </div>
               <div>
                 <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/55">
-                  Retainer
+                  Step 02
                 </div>
-                <div className="font-serif text-[32px] leading-none tracking-[-0.025em] mt-2">
-                  {site.pricing.retainer}
-                </div>
+                <p className="font-serif text-[22px] leading-[1.15] tracking-[-0.02em] mt-2">
+                  We reply with your setup, retainer, and 90-day plan.
+                </p>
               </div>
               <div>
                 <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/55">
                   Engagement
                 </div>
-                <div className="font-serif text-[24px] leading-none tracking-[-0.02em] mt-2">
-                  {site.pricing.engagement}
-                </div>
+                <p className="font-serif text-[22px] leading-[1.15] tracking-[-0.02em] mt-2">
+                  12 months. Exit any quarter with 30 days&apos; notice.
+                </p>
               </div>
             </div>
-            <CTAButton href="/contact" variant="cream-primary">
-              Start the conversation →
+            <CTAButton href="/pricing" variant="cream-primary">
+              Start the fit check →
             </CTAButton>
           </div>
         </div>

@@ -4,12 +4,12 @@
 
 ## Who we serve
 
-B2B companies past $500K ARR or post-seed. SaaS, B2B products, services, agencies. Founder-led teams with traffic but a thin middle-of-funnel.
+B2B companies past the pre-revenue stage — post-seed and up. SaaS, B2B products, services, agencies. Founder-led teams with traffic but a thin middle-of-funnel.
 
 ## Who we don't serve
 
 - Consulting firms → we route them to our sister studio Indlead (indlead.com)
-- Pre-revenue / under $500K ARR
+- Pre-revenue / too early stage
 - Ecommerce, D2C, local services
 - Teams looking for tactical one-off sprints
 
@@ -23,14 +23,15 @@ Fifteen disciplines across three groups, bundled into one engagement:
 
 ## Pricing
 
-- Setup: $15,000 (one-time, 50% on kickoff, 50% on site launch)
-- Retainer: $5,000 per 28 days (starts at site launch)
+Secret Layer is priced on fit, not on tiers. One bundled 12-month engagement. Setup + retainer numbers are calibrated to revenue band, deal size, and funnel shape. To get your custom pricing, fill out the fit-check form on the Pricing page — we reply within one business day with setup, retainer, and what the 90-day guarantee looks like at your stage.
+
 - Engagement: 12 months
-- Total 12-month investment: ~$80,000
+- Exit: any quarter with 30 days' notice
+- Custom pricing: https://secretlayer.co/pricing
 
 ## Guarantee
 
-10 qualified leads in 90 days — or we work free until we hit it. Miss at 180 days: full refund of everything paid plus a $2K penalty.
+10 qualified leads in 90 days — or we work free until we hit it. Miss at 180 days: full refund of everything paid plus a penalty on top.
 
 ## Team
 

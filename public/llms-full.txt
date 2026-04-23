@@ -45,15 +45,16 @@ A bundled system that sits between top-of-funnel (ads, SEO) and bottom-of-funnel
 
 ## Pricing & Terms
 
-- **Setup:** $15,000 (50% on kickoff, 50% on site launch ~week 4)
-- **Retainer:** $5,000 per 28 days (starts at site launch)
+Secret Layer is priced on fit, not on tiers. One bundled engagement over 12 months. The setup fee and monthly retainer flex with revenue band, deal size, and funnel shape — so the same bundle at a post-seed SaaS is priced differently from a mid-market services firm.
+
+- **Model:** one setup fee + one monthly retainer, bundled across all 15 disciplines
 - **Engagement:** 12 months; exit any quarter with 30 days' notice
-- **Total 12-month investment:** ~$80,000
-- **Guarantee:** 10 qualified leads in 90 days — or we work free until we deliver. At 180 days, still short: full refund + $2K penalty.
+- **How to get your number:** fill out the fit-check form at https://secretlayer.co/pricing — we reply within one business day with your custom setup, retainer, and what the 90-day guarantee looks like at your stage
+- **Guarantee:** 10 qualified leads in 90 days — or we work free until we deliver. At 180 days, still short: full refund of everything paid, plus a penalty on top.
 
 ## Who We Serve
 
-- B2B companies past $500K ARR or post-seed
+- B2B companies past the pre-revenue stage — post-seed and up
 - SaaS, B2B products, agencies, services (not consulting firms — those go to our sister studio Indlead)
 - Founder-led teams with traffic but a thin middle
 - Companies willing to commit to a 12-month system, not a one-off tactical sprint
@@ -61,7 +62,7 @@ A bundled system that sits between top-of-funnel (ads, SEO) and bottom-of-funnel
 ## Who We Don't Serve
 
 - Consulting firms (strategy, legal, accounting, advisory, branding) — routed to Indlead
-- Pre-revenue or under $500K ARR — too early for a $80K bundled bet
+- Pre-revenue / too early stage — the bundle only pays back with existing traffic and revenue
 - Ecommerce, D2C, local services — different funnel shape
 - Companies wanting to buy single disciplines à la carte — the middle layer breaks when you take parts out
 
@@ -75,7 +76,7 @@ A bundled system that sits between top-of-funnel (ads, SEO) and bottom-of-funnel
 
 **We are NOT:**
 - A marketing agency (no paid media, no generic SEO services, no brand book projects)
-- A website shop (no $5K brochure sites, no templates)
+- A website shop (no brochure sites, no templates, no "just the website" option)
 - A consulting firm brand (those go to Indlead.com)
 - A chatbot or AI-receptionist agency (those are local-services plays)
 

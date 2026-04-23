@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Who do you work with?",
     answer:
-      "B2B companies past $500K ARR or post-seed. Not consulting firms — those go to our sister studio Indlead. Not local services. Not ecommerce. We work with SaaS, B2B products, and agencies whose problem is a missing middle, not a missing top.",
+      "B2B companies past the pre-revenue stage — post-seed and up. Not consulting firms (those go to our sister studio Indlead). Not local services. Not ecommerce. We work with SaaS, B2B products, and agencies whose problem is a missing middle, not a missing top.",
   },
 ];
 
@@ -144,7 +144,7 @@ export default function AboutPage() {
           </StanzaLine>
           <StanzaLine className="text-bone/80">
             Our bet: <em>if we can&apos;t produce 10 qualified leads in 90 days, we work free
-            until we do.</em> Miss at 180 days — full refund plus a $2K penalty.
+            until we do.</em> Miss at 180 days — full refund plus a penalty on top.
           </StanzaLine>
           <StanzaLine className="text-bone/80">
             We&apos;re the only warm-up agency that will sign that. Because we built the system
@@ -172,7 +172,7 @@ export default function AboutPage() {
             {
               label: "Not a website shop",
               items: [
-                "No $5K brochure sites",
+                "No brochure sites",
                 "No template resales",
                 "No 'just the website' option",
               ],
@@ -188,7 +188,7 @@ export default function AboutPage() {
             {
               label: "Not for everyone",
               items: [
-                "Under $500K ARR → too early",
+                "Pre-revenue / too early stage",
                 "Ecom / local services → wrong shape",
                 "Wants tactics, not a system → pass",
               ],

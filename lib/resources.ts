@@ -226,7 +226,7 @@ export const articles: Article[] = [
     content: [
       "Every other agency we've seen bills for effort. You buy hours, retainers, scopes. The agency delivers effort. Whether that effort produces pipeline is your problem, not theirs.",
       "That's a lottery. The agency wins whether you win or not. You win only if you happen to get lucky.",
-      "We took the opposite bet. Our guarantee: 10 qualified leads in 90 days. Miss at 90, we work free. Miss at 180, full refund plus a $2K penalty.",
+      "We took the opposite bet. Our guarantee: 10 qualified leads in 90 days. Miss at 90, we work free. Miss at 180, full refund plus a penalty on top.",
       "We can do that because we built the system ourselves — and we run the numbers on it every month. We know what it takes to produce 10 qualified leads in 90 days for our ICP. We also know when a client isn't the right fit, which is why half of discovery calls end with us saying no.",
       "*(Continued — this is a placeholder body. Full article ships with launch.)*",
     ],

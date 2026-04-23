@@ -5,46 +5,46 @@ import { BrandBar } from "@/components/BrandBar";
 import { Display, Headline, MidHeadline, SmallHeadline, Eyebrow, Body } from "@/components/Typography";
 import { CTAButton } from "@/components/CTAButton";
 import { PillTag } from "@/components/PillTag";
-import { MathRow } from "@/components/MathRow";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
+import { PricingQualifier } from "./PricingQualifier";
 
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "One price. No tiers. $15,000 setup + $5,000 per 28 days, over 12 months. 10 qualified leads in 90 days or we work free.",
+    "Secret Layer is priced on fit, not on tiers. Answer ten questions — get your custom setup + retainer back within one business day. 10 qualified leads in 90 days or we work free.",
 };
 
 const faqs = [
   {
+    question: "Why don't you publish prices?",
+    answer:
+      "Because one public number doesn't fit a post-seed SaaS, a mid-market services firm, and a growth-stage B2B platform. Our setup and retainer flex with revenue band, deal size, and funnel shape. Answer the fit-check form and you get your real numbers — not a range.",
+  },
+  {
     question: "Why a 12-month engagement?",
     answer:
-      "Because the middle of the funnel is a compound asset. Month 1 is setup. Month 3 is the first guarantee checkpoint. Months 4–12 are where content, AEO, and nurture start actually producing. Anything shorter and we'd be charging you for the setup without the payoff.",
+      "Because the middle of the funnel is a compound asset. Month 1 is setup. Month 3 is the first guarantee checkpoint. Months 4–12 are where content, AEO, and nurture start actually producing. Anything shorter and we'd charge for setup without the payoff.",
   },
   {
     question: "What if I cancel?",
     answer:
-      "You can exit at any quarterly checkpoint with 30 days' notice. We'll hand off everything we've built — site, magnets, content, automations. Your retainer stops; nothing we built becomes hostage.",
+      "You can exit at any quarterly checkpoint with 30 days' notice. We hand off everything we've built — site, magnets, content, automations. Your retainer stops; nothing we built becomes hostage.",
   },
   {
     question: "What counts as a qualified lead?",
     answer:
-      "A lead with verified work email, matched to your ICP, with demonstrated intent (tool use, magnet download, or direct inquiry). We define ICP together in week 1 — and we measure against that definition from day 90 onward.",
+      "A lead with a verified work email, matched to your ICP, with demonstrated intent (tool use, magnet download, or direct inquiry). We define ICP together in week 1 and measure against that definition from day 90 onward.",
   },
   {
     question: "What happens if we miss the guarantee?",
     answer:
-      "Day 90 miss: we work free (no new invoices) until we hit 10 qualified leads. Day 180 miss: full refund of everything you've paid, plus a $2K penalty. You're made whole if we fail — and we take on the risk.",
+      "Day 90 miss: we work free (no new invoices) until we hit 10 qualified leads. Day 180 miss: full refund of everything you've paid, plus a penalty on top. You're made whole if we fail — we carry the risk.",
   },
   {
     question: "Can I just buy one service?",
     answer:
-      "No. The middle layer breaks when you buy one piece of it. If you only need one discipline (e.g. just a website, just SEO), we're not the right fit — and we'll tell you so in discovery.",
-  },
-  {
-    question: "Is there a payment plan?",
-    answer:
-      "The $15K setup is split 50% on kickoff, 50% on site launch (usually week 4). The $5K / 28 days billing starts at site launch. No long-term contracts — you pay per 28-day cycle.",
+      "No. The middle layer breaks when you buy one piece of it. If you only need one discipline (a website, an SEO audit), we're not the right fit — and we'll say so in reply to your fit check.",
   },
 ];
 
@@ -96,152 +96,108 @@ export default function PricingPage() {
       <Section variant="ink" className="pt-28 lg:pt-36 overflow-hidden">
         <GridBg />
         <div className="relative">
-          <BrandBar label="Pricing" number="One stage · Active now" className="mb-16" />
+          <BrandBar label="Pricing" number="Priced on fit" className="mb-16" />
           <Display>
-            <em>$15K</em> setup. <br />
-            <em>$5K</em> per 28 days. <br />
-            <em>12 months</em>.
+            Priced on <em>fit</em>. <br />
+            Not on <em>tiers</em>.
           </Display>
-          <Body size="xl" className="text-bone/75 mt-10 max-w-[700px]">
-            No tiers. No modules to bolt on. No hidden scope. Every Secret Layer client gets the
-            full stack — and the full guarantee.
+          <Body size="xl" className="text-bone/75 mt-10 max-w-[720px]">
+            One bundled engagement. One retainer cadence. One guarantee. The only thing that
+            changes is the setup + retainer number — and that&apos;s calibrated to your revenue,
+            deal size, and funnel stage.
           </Body>
-          <div className="mt-10">
-            <CTAButton href="/contact" size="lg">
-              Start the conversation →
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="#qualifier" size="lg">
+              Start the fit check →
+            </CTAButton>
+            <CTAButton href="/resources/tools/funnel-audit" variant="secondary" size="lg">
+              Audit your funnel first
             </CTAButton>
           </div>
         </div>
       </Section>
 
-      {/* Main pricing card */}
+      {/* How it works */}
       <Section variant="cream" className="py-24 lg:py-32">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-end mb-12">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-end mb-16">
           <div>
-            <BrandBar label="Stage 1" number="The build" variant="cream" className="mb-8" />
-            <Headline className="max-w-[900px]">
-              The <em>Secret Layer</em> build, one price.
+            <BrandBar label="How pricing works" number="Three steps" variant="cream" className="mb-8" />
+            <Headline className="max-w-[960px]">
+              Custom numbers back within <em>one business day</em>.
             </Headline>
           </div>
           <PillTag variant="flame">Active · Taking 3 clients / Q</PillTag>
         </div>
-
-        <div className="grid lg:grid-cols-[1.3fr_1fr] gap-5">
-          <div className="border border-ink/15 rounded-[4px] p-8 lg:p-10 bg-ink text-bone flex flex-col gap-8">
-            <div>
-              <Eyebrow>What you get</Eyebrow>
-              <MidHeadline as="h3" className="mt-4">
-                All 15 disciplines, across 3 groups, over 12 months.
-              </MidHeadline>
+        <div className="grid md:grid-cols-3 gap-5">
+          {[
+            {
+              num: "01",
+              label: "Fit check",
+              body: "Answer ten questions — revenue band, deal size, traffic, funnel shape, timeline. Takes five minutes.",
+            },
+            {
+              num: "02",
+              label: "We assess",
+              body: "We review your answers, your site, and whether the model fits. If it doesn't, we say so and route you elsewhere.",
+            },
+            {
+              num: "03",
+              label: "You get your brief",
+              body: "Custom setup + retainer, what the 90-day guarantee looks like at your stage, and a recommended start date.",
+            },
+          ].map((s) => (
+            <div
+              key={s.num}
+              className="border border-ink/15 rounded-[4px] p-8 bg-cream flex flex-col gap-4"
+            >
+              <div className="flex items-center gap-3">
+                <span className="font-serif text-[28px] leading-none text-flame-dark tabular-nums">
+                  {s.num}
+                </span>
+                <Eyebrow>{s.label}</Eyebrow>
+              </div>
+              <p className="text-[16px] leading-[1.5] text-ink/80">{s.body}</p>
             </div>
-            <div className="grid md:grid-cols-3 gap-6 border-t border-bone/10 pt-6">
-              {modules.map((m) => (
-                <div key={m.group} className="flex flex-col gap-3">
-                  <Eyebrow className="text-flame opacity-100">{m.group}</Eyebrow>
-                  <ul className="flex flex-col gap-2">
-                    {m.items.map((i) => (
-                      <li key={i} className="text-[14px] text-bone/85 leading-[1.5]">
-                        {i}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            <div className="border-t border-bone/10 pt-6">
-              <Eyebrow>Plus</Eyebrow>
-              <div className="mt-3 grid md:grid-cols-2 gap-x-8 gap-y-2">
-                {[
-                  "Weekly working sessions",
-                  "Dedicated Slack channel",
-                  "Monthly outcome reviews",
-                  "90-day lead guarantee",
-                  "Quarterly strategy resets",
-                  "Full attribution dashboard",
-                ].map((item) => (
-                  <div key={item} className="flex gap-3 text-[14px] text-bone/85">
-                    <span className="mt-[7px] h-[3px] w-[3px] rounded-full bg-flame shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="border border-ink/15 rounded-[4px] p-8 flex flex-col gap-6 bg-cream">
-            <Eyebrow>Investment</Eyebrow>
-            <div className="flex flex-col gap-6">
-              <div>
-                <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/55">
-                  Setup (one-time)
-                </div>
-                <div className="font-serif text-[56px] leading-none tracking-[-0.025em] mt-2">
-                  {site.pricing.setup}
-                </div>
-                <div className="text-[13px] text-ink/60 mt-2">
-                  50% on kickoff. 50% on site launch.
-                </div>
-              </div>
-              <div className="border-t border-ink/10 pt-6">
-                <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/55">
-                  Retainer
-                </div>
-                <div className="font-serif text-[40px] leading-none tracking-[-0.025em] mt-2">
-                  {site.pricing.retainer}
-                </div>
-                <div className="text-[13px] text-ink/60 mt-2">
-                  Billed every 28 days. Starts at site launch.
-                </div>
-              </div>
-              <div className="border-t border-ink/10 pt-6">
-                <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/55">
-                  Engagement
-                </div>
-                <div className="font-serif text-[32px] leading-none tracking-[-0.02em] mt-2">
-                  {site.pricing.engagement}
-                </div>
-                <div className="text-[13px] text-ink/60 mt-2">
-                  Exit any quarter with 30 days&apos; notice.
-                </div>
-              </div>
-              <div className="border-t border-flame-dark/40 pt-6 bg-flame-dark/[0.06] -mx-8 px-8 py-6 -mb-8 rounded-b-[4px]">
-                <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-flame-dark font-medium">
-                  Guarantee
-                </div>
-                <div className="font-serif text-[22px] leading-[1.2] tracking-[-0.015em] mt-2">
-                  10 leads in 90 days — or we work free.
-                </div>
-              </div>
-            </div>
-            <CTAButton href="/contact" variant="cream-primary" size="lg">
-              Start the conversation →
-            </CTAButton>
-          </div>
+          ))}
         </div>
       </Section>
 
-      {/* Total investment math */}
+      {/* What's inside (no prices) */}
       <Section variant="ink">
-        <BrandBar label="The math" number="Full engagement" className="mb-10" />
-        <Headline className="max-w-[900px]">
-          One year, <em>one invoice cadence</em>.
+        <BrandBar label="What's inside" number="One bundle" className="mb-10" />
+        <Headline className="max-w-[1000px] mb-12">
+          All fifteen disciplines. <em>One</em> engagement.
         </Headline>
-        <div className="mt-16 grid lg:grid-cols-2 gap-12 lg:gap-24 max-w-[1200px]">
-          <div className="flex flex-col gap-5">
-            <MathRow label="Setup fee" value={site.pricing.setup} />
-            <MathRow label="Retainer × 13 cycles" value="$65,000" />
-            <MathRow label="Total · 12 months" value="$80,000" emphasis />
-          </div>
-          <div className="flex flex-col gap-5">
-            <Eyebrow>What $80K buys</Eyebrow>
-            <p className="font-serif text-[clamp(1.5rem,2.5vw,2rem)] leading-[1.25] tracking-[-0.02em]">
-              A two-person senior team for a year, running fifteen disciplines, on the
-              <em> outcome-pricing</em> model agencies swore off.
-            </p>
-            <Body className="text-bone/70">
-              For context: a single senior marketing hire costs $150K+ fully loaded. We&apos;re
-              two senior operators plus an AI layer, at half the burn, with a refund clause.
-            </Body>
+        <div className="grid md:grid-cols-3 gap-6 max-w-[1100px]">
+          {modules.map((m) => (
+            <div key={m.group} className="border border-bone/10 rounded-[4px] p-6 flex flex-col gap-4">
+              <Eyebrow className="text-flame opacity-100">{m.group}</Eyebrow>
+              <ul className="flex flex-col gap-2">
+                {m.items.map((i) => (
+                  <li key={i} className="text-[14px] text-bone/85 leading-[1.5]">
+                    {i}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="mt-16 border-t border-bone/10 pt-10 max-w-[900px]">
+          <Eyebrow>Plus, every engagement</Eyebrow>
+          <div className="mt-6 grid md:grid-cols-2 gap-x-10 gap-y-3">
+            {[
+              "Weekly working sessions",
+              "Dedicated Slack channel",
+              "Monthly outcome reviews",
+              "90-day lead guarantee",
+              "Quarterly strategy resets",
+              "Full attribution dashboard",
+            ].map((item) => (
+              <div key={item} className="flex gap-3 text-[15px] text-bone/85">
+                <span className="mt-[8px] h-[3px] w-[3px] rounded-full bg-flame shrink-0" />
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
@@ -249,7 +205,7 @@ export default function PricingPage() {
       {/* Guarantee */}
       <Section variant="charcoal" className="overflow-hidden">
         <BrandBar label="The guarantee" number="Priced on outcomes" className="mb-10" />
-        <Headline className="max-w-[1000px]">
+        <Headline className="max-w-[1100px]">
           We carry the <em>risk</em>. Not you.
         </Headline>
         <div className="mt-16 grid sm:grid-cols-3 gap-5">
@@ -257,7 +213,7 @@ export default function PricingPage() {
             <Eyebrow>Day 0</Eyebrow>
             <SmallHeadline as="h3">Kickoff.</SmallHeadline>
             <Body size="sm" className="text-bone/70">
-              $15K setup, 50% on kickoff. Week 1 starts immediately.
+              Setup starts. Strategy, design, dev, and content all run in parallel from week 1.
             </Body>
           </div>
           <div className="border border-flame/40 bg-flame/[0.06] rounded-[4px] p-8 flex flex-col gap-3">
@@ -266,17 +222,26 @@ export default function PricingPage() {
               10 qualified leads — or free.
             </SmallHeadline>
             <Body size="sm" className="text-bone/70">
-              Miss the mark? We work free (no new invoices) until we hit it.
+              Miss the mark? We work free — no new invoices — until we hit it.
             </Body>
           </div>
           <div className="border border-bone/10 rounded-[4px] p-8 flex flex-col gap-3">
             <Eyebrow>Day 180</Eyebrow>
-            <SmallHeadline as="h3">Full refund + $2K.</SmallHeadline>
+            <SmallHeadline as="h3">Full refund + penalty.</SmallHeadline>
             <Body size="sm" className="text-bone/70">
-              Still short of 10 leads? Everything paid gets refunded, plus $2K penalty.
+              Still short of 10 leads? Everything paid gets refunded, plus a penalty on top.
             </Body>
           </div>
         </div>
+      </Section>
+
+      {/* Qualifier form */}
+      <Section variant="ink" id="qualifier" className="py-24 lg:py-32">
+        <BrandBar label="Fit check" number="Ten questions · 5 min" className="mb-10" />
+        <MidHeadline className="max-w-[900px] mb-10">
+          Answer the fit check. Get your <em>custom pricing + 90-day plan</em> back by tomorrow.
+        </MidHeadline>
+        <PricingQualifier />
       </Section>
 
       {/* FAQ */}
@@ -297,18 +262,18 @@ export default function PricingPage() {
       <Section variant="ink" className="py-24 lg:py-32">
         <div className="flex flex-col items-center text-center gap-8">
           <Display as="h2" className="max-w-[1000px]">
-            Still reading? <em>Let&apos;s talk.</em>
+            Still reading? <em>Run the fit check.</em>
           </Display>
-          <Body size="lg" className="text-bone/70 max-w-[500px]">
-            Free 20-min audit. We&apos;ll tell you if Secret Layer is the right fit, or point
-            you elsewhere.
+          <Body size="lg" className="text-bone/70 max-w-[520px]">
+            Five minutes in. Custom numbers back in one business day. No call required until you
+            want one.
           </Body>
           <div className="flex flex-col sm:flex-row gap-3">
-            <CTAButton href="/contact" size="lg">
-              Book a call →
+            <CTAButton href="#qualifier" size="lg">
+              Start the fit check →
             </CTAButton>
             <CTAButton href="/resources/tools/funnel-audit" variant="secondary" size="lg">
-              Audit Your Funnel
+              Audit your funnel
             </CTAButton>
           </div>
         </div>
