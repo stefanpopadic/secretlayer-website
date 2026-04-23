@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-ink: #0a0a0a;
+  --color-charcoal: #141414;
+  --color-bone: #f5f5f0;
+  --color-cream: #f2ede3;
+  --color-flame: #ff5c2b;
+  --color-flame-dark: #d9401a;
+
+  --color-background: var(--color-ink);
+  --color-foreground: var(--color-bone);
+
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "SF Mono", Monaco, monospace;
+
+  --tracking-tightest: -0.035em;
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.02em;
+  --tracking-snug: -0.01em;
+  --tracking-normal: -0.005em;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.14em;
+  --tracking-widest: 0.18em;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::selection {
+  background: var(--color-flame);
+  color: var(--color-ink);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Editorial defaults */
+.display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+.display em { font-style: italic; }
+
+.headline {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+}
+.headline em { font-style: italic; }
+
+.prose-body em { font-style: italic; }
+
+.grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(245, 245, 240, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 245, 240, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.grid-bg-cream::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 10, 10, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
 }

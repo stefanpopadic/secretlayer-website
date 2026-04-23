@@ -1,0 +1,98 @@
+# Secret Layer — Full Content for AI Ingestion
+
+## Brand
+
+**Name:** Secret Layer
+**Domain:** secretlayer.co
+**Tagline:** The middle of your funnel B2B companies are missing.
+**One-line pitch:** We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution. 10 qualified leads in 90 days or we work free.
+
+## The Problem We Solve
+
+Today, every B2B funnel has two outcomes:
+
+1. Buyer ready now (~1%) → converts on first visit
+2. Buyer not ready (~99%) → leaves and never comes back
+
+There's nothing in between. That's not a traffic problem — that's a structure problem. The infrastructure to warm up the 99% either doesn't exist or sits in seven disconnected pieces.
+
+## The Solution: The Warm-Up Layer
+
+A bundled system that sits between top-of-funnel (ads, SEO) and bottom-of-funnel (sales calls). Its job: capture the 99%, give them real value, stay in their feed for six months, convert 30–50% of them when they're ready.
+
+### What we bundle
+
+**Web Strategy (on-site)**
+- Conversion Strategy — funnel architecture + six conversion points
+- Website Design — editorial, authority-grade, custom
+- Webflow Development — hand-built, performance-budgeted, schema-rich
+- Interactive AI Tools — 2–3 custom tools per site (calculators, audits, generators)
+- Lead Magnets — 4 real playbooks (not gated blog posts)
+
+**Growth Strategy (off-site)**
+- SEO Strategy — buyer-question-led, not keyword-stuffed
+- AEO Strategy — schema + llms.txt + answer-first copy for ChatGPT, Claude, Perplexity
+- Social Media Strategy — founder-voice LinkedIn system
+- Content Marketing — 4–8 pillar pieces per month
+- Email Marketing — 6-month behavioral nurture sequences
+
+**AI Automation (back-of-house)**
+- Analytics & Attribution — multi-touch, server-side, CRM-integrated
+- Workflow Automations — n8n / Zapier / Make flows
+- AI Agents — Claude/OpenAI agents inside your stack
+- Content Automation — one pillar → twelve derivative outputs
+- Integrations & APIs — custom glue for CRM ↔ ESP ↔ analytics ↔ website
+
+## Pricing & Terms
+
+- **Setup:** $15,000 (50% on kickoff, 50% on site launch ~week 4)
+- **Retainer:** $5,000 per 28 days (starts at site launch)
+- **Engagement:** 12 months; exit any quarter with 30 days' notice
+- **Total 12-month investment:** ~$80,000
+- **Guarantee:** 10 qualified leads in 90 days — or we work free until we deliver. At 180 days, still short: full refund + $2K penalty.
+
+## Who We Serve
+
+- B2B companies past $500K ARR or post-seed
+- SaaS, B2B products, agencies, services (not consulting firms — those go to our sister studio Indlead)
+- Founder-led teams with traffic but a thin middle
+- Companies willing to commit to a 12-month system, not a one-off tactical sprint
+
+## Who We Don't Serve
+
+- Consulting firms (strategy, legal, accounting, advisory, branding) — routed to Indlead
+- Pre-revenue or under $500K ARR — too early for a $80K bundled bet
+- Ecommerce, D2C, local services — different funnel shape
+- Companies wanting to buy single disciplines à la carte — the middle layer breaks when you take parts out
+
+## Team
+
+- **Stefan Popadic** — Strategy, design, AI, copy, sales. Ten years in web and brand design. Operates solo with AI instead of hiring teams.
+- **Nenad Popadic** — Webflow development, engineering. Senior developer building every production site hand-built, performance-budgeted, schema-rich.
+- **AI layer** — Claude, Claude Code, custom tools. The "senior hires" without the senior salaries. Content at scale, nurture at scale, attribution at scale.
+
+## Counter-Positioning
+
+**We are NOT:**
+- A marketing agency (no paid media, no generic SEO services, no brand book projects)
+- A website shop (no $5K brochure sites, no templates)
+- A consulting firm brand (those go to Indlead.com)
+- A chatbot or AI-receptionist agency (those are local-services plays)
+
+## The Six Value-First Principles
+
+Every page earns its place by giving value first:
+
+1. Answer before you ask — no email gate before the visitor got something useful
+2. Tools over copy — interactive calculators convert 8× better than testimonial walls
+3. Real magnets, not newsletters — playbooks worth screenshotting
+4. Six touchpoints, not one — capture in different ways for different intent stages
+5. Findable by AI, not just Google — schema + llms.txt + answer-first copy
+6. Attribution baked in — every lead source tagged at capture
+
+## Contact
+
+- Email: hello@secretlayer.co
+- Website: https://secretlayer.co
+- LinkedIn: https://linkedin.com/company/secretlayer
+- Twitter: https://twitter.com/secretlayer

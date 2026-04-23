@@ -1,0 +1,55 @@
+# Secret Layer
+
+> The warm-up layer B2B funnels are missing. We build the middle of your funnel — website, AI tools, content, SEO, AEO, email nurture, attribution — as one bundled 12-month engagement.
+
+## Who we serve
+
+B2B companies past $500K ARR or post-seed. SaaS, B2B products, services, agencies. Founder-led teams with traffic but a thin middle-of-funnel.
+
+## Who we don't serve
+
+- Consulting firms → we route them to our sister studio Indlead (indlead.com)
+- Pre-revenue / under $500K ARR
+- Ecommerce, D2C, local services
+- Teams looking for tactical one-off sprints
+
+## What we build
+
+Fifteen disciplines across three groups, bundled into one engagement:
+
+- **Web Strategy:** Conversion Strategy, Website Design, Webflow Development, Interactive AI Tools, Lead Magnets
+- **Growth Strategy:** SEO Strategy, AEO Strategy, Social Media Strategy, Content Marketing, Email Marketing
+- **AI Automation:** Analytics & Attribution, Workflow Automations, AI Agents, Content Automation, Integrations & APIs
+
+## Pricing
+
+- Setup: $15,000 (one-time, 50% on kickoff, 50% on site launch)
+- Retainer: $5,000 per 28 days (starts at site launch)
+- Engagement: 12 months
+- Total 12-month investment: ~$80,000
+
+## Guarantee
+
+10 qualified leads in 90 days — or we work free until we hit it. Miss at 180 days: full refund of everything paid plus a $2K penalty.
+
+## Team
+
+Two humans plus AI. Stefan Popadic (strategy, design, AI, copy, sales). Nenad Popadic (Webflow development, engineering).
+
+## Primary pages
+
+- Home: https://secretlayer.co/
+- About: https://secretlayer.co/about
+- Services: https://secretlayer.co/services
+- Pricing: https://secretlayer.co/pricing
+- Resources: https://secretlayer.co/resources
+- Contact: https://secretlayer.co/contact
+
+## Key resources
+
+- llms-full.txt — expanded content for AI ingestion: https://secretlayer.co/llms-full.txt
+- Sitemap: https://secretlayer.co/sitemap.xml
+
+## Contact
+
+Email: hello@secretlayer.co
