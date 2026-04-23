@@ -55,6 +55,14 @@ export default function CaseStudiesPage() {
             Secret Layer started taking clients in Q2 2026. Case studies with real numbers —
             not cherry-picked highlights — publish as each 90-day guarantee closes.
           </Body>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
+            </CTAButton>
+          </div>
         </div>
       </Section>
 
@@ -94,11 +102,11 @@ export default function CaseStudiesPage() {
             slot for you.
           </Body>
           <div className="flex flex-col sm:flex-row gap-3">
-            <CTAButton href="/contact" size="lg">
-              Book a call →
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
             </CTAButton>
-            <CTAButton href="/pricing" variant="secondary" size="lg">
-              See pricing
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
             </CTAButton>
           </div>
         </div>

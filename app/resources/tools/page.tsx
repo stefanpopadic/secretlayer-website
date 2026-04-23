@@ -4,6 +4,7 @@ import { Section } from "@/components/Section";
 import { GridBg } from "@/components/GridBg";
 import { BrandBar } from "@/components/BrandBar";
 import { Display, Headline, SmallHeadline, Body } from "@/components/Typography";
+import { CTAButton } from "@/components/CTAButton";
 import { PillTag } from "@/components/PillTag";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { tools } from "@/lib/resources";
@@ -38,6 +39,14 @@ export default function ToolsIndexPage() {
             No signup wall before the answer. Paste your URL, get the report. Email comes after,
             not before.
           </Body>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
+            </CTAButton>
+          </div>
         </div>
       </Section>
 

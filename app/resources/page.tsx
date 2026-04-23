@@ -39,6 +39,14 @@ export default function ResourcesPage() {
             Everything we use to build the warm-up layer for our clients — free. Tools you can
             run right now. Playbooks you can screenshot. Articles from our bench.
           </Body>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
+            </CTAButton>
+          </div>
         </div>
       </Section>
 
@@ -184,11 +192,11 @@ export default function ResourcesPage() {
             Free tools are the starter kit. The warm-up layer is what actually ships the 5×.
           </Body>
           <div className="flex flex-col sm:flex-row gap-3">
-            <CTAButton href="/pricing" size="lg">
-              See pricing →
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
             </CTAButton>
             <CTAButton href="/contact" variant="secondary" size="lg">
-              Book a call
+              Get in touch
             </CTAButton>
           </div>
         </div>

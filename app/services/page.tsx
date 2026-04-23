@@ -38,9 +38,12 @@ export default function ServicesPage() {
             We don&apos;t sell services à la carte. Every Secret Layer build includes the full
             stack — because the middle of your funnel breaks when one part is missing.
           </Body>
-          <div className="mt-10">
-            <CTAButton href="/pricing" size="lg">
-              See pricing →
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
             </CTAButton>
           </div>
         </div>
@@ -120,11 +123,11 @@ export default function ServicesPage() {
             One setup, one retainer, all fifteen disciplines — over twelve months.
           </Body>
           <div className="flex flex-col sm:flex-row gap-3">
-            <CTAButton href="/pricing" size="lg">
-              See pricing →
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
             </CTAButton>
             <CTAButton href="/contact" variant="secondary" size="lg">
-              Book a call
+              Get in touch
             </CTAButton>
           </div>
         </div>

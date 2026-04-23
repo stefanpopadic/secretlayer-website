@@ -108,11 +108,11 @@ export default async function ToolPage({ params }: Params) {
           the client version includes the fix. And the layer that makes the fix stick.
         </Body>
         <div className="mt-10 flex flex-col sm:flex-row gap-3">
-          <CTAButton href="/pricing" size="lg">
-            See pricing →
+          <CTAButton href="/resources/tools/funnel-audit" size="lg">
+            Get your Free Audit →
           </CTAButton>
           <CTAButton href="/contact" variant="secondary" size="lg">
-            Book a call
+            Get in touch
           </CTAButton>
         </div>
       </Section>

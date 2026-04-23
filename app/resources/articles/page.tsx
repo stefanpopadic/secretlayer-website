@@ -4,6 +4,7 @@ import { Section } from "@/components/Section";
 import { GridBg } from "@/components/GridBg";
 import { BrandBar } from "@/components/BrandBar";
 import { Display, Headline, MidHeadline, Body } from "@/components/Typography";
+import { CTAButton } from "@/components/CTAButton";
 import { PillTag } from "@/components/PillTag";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { articles } from "@/lib/resources";
@@ -37,6 +38,14 @@ export default function ArticlesPage() {
             Not &ldquo;5 tips&rdquo; posts. The arguments, teardowns, and frameworks we&apos;re
             publishing as we build.
           </Body>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
+            </CTAButton>
+          </div>
         </div>
       </Section>
 

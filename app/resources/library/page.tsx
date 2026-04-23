@@ -38,6 +38,14 @@ export default function LibraryPage() {
             The playbooks, checklists, and templates we use on every client build. Not summaries —
             the real working documents.
           </Body>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
+            </CTAButton>
+          </div>
         </div>
       </Section>
 
@@ -76,9 +84,14 @@ export default function LibraryPage() {
           <SmallHeadline>
             Want all of these — <em>plus the layer that ships them</em>?
           </SmallHeadline>
-          <CTAButton href="/pricing" variant="secondary">
-            See pricing →
-          </CTAButton>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
+            </CTAButton>
+          </div>
         </div>
       </Section>
     </>

@@ -58,6 +58,14 @@ export default function AboutPage() {
             bothers with — because to do it well you&apos;d need five specialists, and nobody
             wants to coordinate five specialists.
           </Body>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
+            </CTAButton>
+          </div>
         </div>
       </Section>
 
@@ -231,10 +239,10 @@ export default function AboutPage() {
           </Body>
           <div className="flex flex-col sm:flex-row gap-3">
             <CTAButton href="/resources/tools/funnel-audit" size="lg">
-              Audit Your Funnel →
+              Get your Free Audit →
             </CTAButton>
             <CTAButton href="/contact" variant="secondary" size="lg">
-              Book a call
+              Get in touch
             </CTAButton>
           </div>
         </div>

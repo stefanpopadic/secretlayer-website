@@ -60,6 +60,14 @@ export default async function GroupPage({ params }: Params) {
           <Body size="lg" className="text-bone/60 mt-6 max-w-[640px]">
             {group.summary}
           </Body>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
+            </CTAButton>
+          </div>
         </div>
       </Section>
 
@@ -141,11 +149,11 @@ export default async function GroupPage({ params }: Params) {
             comes together.
           </Body>
           <div className="flex flex-col sm:flex-row gap-3">
-            <CTAButton href="/pricing" size="lg">
-              See pricing →
+            <CTAButton href="/resources/tools/funnel-audit" size="lg">
+              Get your Free Audit →
             </CTAButton>
-            <CTAButton href={`/services/${nextGroup.slug}`} variant="secondary" size="lg">
-              Next group: {nextGroup.title} →
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
             </CTAButton>
           </div>
         </div>

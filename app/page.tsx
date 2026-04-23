@@ -30,10 +30,10 @@ export default function Home() {
             </Body>
             <div className="flex flex-col sm:flex-row gap-3">
               <CTAButton href="/resources/tools/funnel-audit" size="lg">
-                Audit Your Funnel →
+                Get your Free Audit →
               </CTAButton>
-              <CTAButton href="/pricing" variant="secondary" size="lg">
-                Run the fit check
+              <CTAButton href="/contact" variant="secondary" size="lg">
+                Get in touch
               </CTAButton>
             </div>
           </div>
@@ -544,10 +544,10 @@ export default function Home() {
           </StanzaLine>
           <div className="flex flex-col sm:flex-row gap-3">
             <CTAButton href="/resources/tools/funnel-audit" size="lg">
-              Audit Your Funnel →
+              Get your Free Audit →
             </CTAButton>
             <CTAButton href="/contact" variant="secondary" size="lg">
-              Book a call
+              Get in touch
             </CTAButton>
           </div>
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-bone/40 mt-4">

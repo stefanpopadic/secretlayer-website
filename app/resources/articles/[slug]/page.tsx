@@ -114,9 +114,14 @@ export default async function ArticlePage({ params }: Params) {
             </Headline>
             <Body className="text-bone/70 max-w-[640px]">{next.excerpt}</Body>
           </Link>
-          <CTAButton href="/contact" className="mt-4">
-            Book a call →
-          </CTAButton>
+          <div className="mt-4 flex flex-col sm:flex-row gap-3">
+            <CTAButton href="/resources/tools/funnel-audit">
+              Get your Free Audit →
+            </CTAButton>
+            <CTAButton href="/contact" variant="secondary">
+              Get in touch
+            </CTAButton>
+          </div>
         </div>
       </Section>
     </>

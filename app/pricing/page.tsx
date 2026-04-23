@@ -115,8 +115,8 @@ export default function PricingPage() {
             <CTAButton href="#qualifier" size="lg">
               Start the calculator →
             </CTAButton>
-            <CTAButton href="/resources/tools/funnel-audit" variant="secondary" size="lg">
-              Get a manual audit instead
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
             </CTAButton>
           </div>
         </div>
@@ -277,8 +277,8 @@ export default function PricingPage() {
             <CTAButton href="#qualifier" size="lg">
               Start the calculator →
             </CTAButton>
-            <CTAButton href="/resources/tools/funnel-audit" variant="secondary" size="lg">
-              Audit your funnel
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Get in touch
             </CTAButton>
           </div>
         </div>

@@ -27,7 +27,7 @@ export function Header() {
 
         <div className="hidden lg:block">
           <CTAButton href="/resources/tools/funnel-audit" size="sm">
-            Audit Your Funnel →
+            Get your Free Audit →
           </CTAButton>
         </div>
 
@@ -75,7 +75,7 @@ export function Header() {
                 size="base"
                 className="w-full justify-center"
               >
-                Audit Your Funnel →
+                Get your Free Audit →
               </CTAButton>
             </div>
           </div>

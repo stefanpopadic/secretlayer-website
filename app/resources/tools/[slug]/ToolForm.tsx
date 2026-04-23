@@ -36,7 +36,7 @@ export function ToolForm({ tool }: { tool: Tool }) {
             href="/contact"
             className="inline-flex items-center gap-2 font-sans font-medium tracking-[-0.01em] rounded-[3px] px-5 py-3 text-[14px] bg-flame text-ink hover:bg-flame-dark hover:text-bone transition-colors"
           >
-            Book a call →
+            Get in touch →
           </a>
         </div>
       </div>

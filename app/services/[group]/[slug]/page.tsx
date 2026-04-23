@@ -18,10 +18,10 @@ function primaryOffer(slug: string): { href: string; label: string } {
     case "seo-strategy":
       return { href: "/resources/tools/seo-checker", label: "Run your SEO audit →" };
     case "conversion-strategy":
-      return { href: "/resources/tools/funnel-audit", label: "Audit your funnel →" };
+      return { href: "/resources/tools/funnel-audit", label: "Get your Free Audit →" };
     case "website-design":
     case "webflow-development":
-      return { href: "/resources/tools/funnel-audit", label: "Audit your funnel →" };
+      return { href: "/resources/tools/funnel-audit", label: "Get your Free Audit →" };
     case "interactive-ai-tools":
       return { href: "/resources/tools", label: "See the AI tools →" };
     case "lead-magnets":
@@ -34,13 +34,13 @@ function primaryOffer(slug: string): { href: string; label: string } {
     case "social-media-strategy":
       return { href: "/resources/library", label: "Get the LinkedIn Playbook →" };
     case "analytics-attribution":
-      return { href: "/resources/tools/funnel-audit", label: "Audit your attribution →" };
+      return { href: "/resources/tools/funnel-audit", label: "Get your Free Audit →" };
     case "workflow-automations":
     case "ai-agents":
     case "integrations-apis":
       return { href: "/resources/library", label: "See the playbooks →" };
     default:
-      return { href: "/resources/tools/funnel-audit", label: "Audit your funnel →" };
+      return { href: "/resources/tools/funnel-audit", label: "Get your Free Audit →" };
   }
 }
 
@@ -113,7 +113,7 @@ export default async function SubpagePage({ params }: Params) {
               {offer.label}
             </CTAButton>
             <CTAButton href="/contact" variant="secondary" size="lg">
-              Book a call
+              Get in touch
             </CTAButton>
           </div>
         </div>
@@ -242,7 +242,7 @@ export default async function SubpagePage({ params }: Params) {
               {offer.label}
             </CTAButton>
             <CTAButton href="/contact" variant="secondary" size="lg">
-              Book a call
+              Get in touch
             </CTAButton>
           </div>
         </div>
