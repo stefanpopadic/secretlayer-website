@@ -44,23 +44,23 @@ html, body {
   font-family: var(--font-serif);
   font-weight: 400;
   letter-spacing: -0.035em;
-  line-height: 1;
+  line-height: 100%;
 }
-.display em { font-style: italic; line-height: 1; }
+.display em { font-style: italic; line-height: 100%; }
 
 .headline {
   font-family: var(--font-serif);
   font-weight: 400;
   letter-spacing: -0.03em;
-  line-height: 1;
+  line-height: 100%;
 }
-.headline em { font-style: italic; line-height: 1; }
+.headline em { font-style: italic; line-height: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  line-height: 100%;
 }
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
-  line-height: 1;
+  line-height: 100%;
 }
 
 .prose-body em { font-style: italic; }
