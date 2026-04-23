@@ -11,6 +11,39 @@ import { BreadcrumbJsonLd, ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd"
 import { serviceGroups, findSubpage } from "@/lib/services";
 import { site } from "@/lib/site";
 
+function primaryOffer(slug: string): { href: string; label: string } {
+  switch (slug) {
+    case "aeo-strategy":
+      return { href: "/resources/tools/aeo-checker", label: "Check your AEO →" };
+    case "seo-strategy":
+      return { href: "/resources/tools/seo-checker", label: "Run your SEO audit →" };
+    case "conversion-strategy":
+      return { href: "/resources/tools/funnel-audit", label: "Audit your funnel →" };
+    case "website-design":
+    case "webflow-development":
+      return { href: "/resources/tools/funnel-audit", label: "Audit your funnel →" };
+    case "interactive-ai-tools":
+      return { href: "/resources/tools", label: "See the AI tools →" };
+    case "lead-magnets":
+      return { href: "/resources/library", label: "Browse the library →" };
+    case "content-marketing":
+    case "content-automation":
+      return { href: "/resources/library", label: "Get the Content OS →" };
+    case "email-marketing":
+      return { href: "/resources/library", label: "Get the Nurture Starter →" };
+    case "social-media-strategy":
+      return { href: "/resources/library", label: "Get the LinkedIn Playbook →" };
+    case "analytics-attribution":
+      return { href: "/resources/tools/funnel-audit", label: "Audit your attribution →" };
+    case "workflow-automations":
+    case "ai-agents":
+    case "integrations-apis":
+      return { href: "/resources/library", label: "See the playbooks →" };
+    default:
+      return { href: "/resources/tools/funnel-audit", label: "Audit your funnel →" };
+  }
+}
+
 export async function generateStaticParams() {
   return serviceGroups.flatMap((g) =>
     g.subpages.map((s) => ({ group: g.slug, slug: s.slug }))
@@ -37,6 +70,7 @@ export default async function SubpagePage({ params }: Params) {
 
   const subIdx = group.subpages.findIndex((s) => s.slug === sub.slug);
   const nextSub = group.subpages[(subIdx + 1) % group.subpages.length];
+  const offer = primaryOffer(sub.slug);
 
   const url = `${site.url}/services/${group.slug}/${sub.slug}`;
 
@@ -75,11 +109,11 @@ export default async function SubpagePage({ params }: Params) {
             {sub.summary}
           </Body>
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
-            <CTAButton href="/contact" size="lg">
-              Start the conversation →
+            <CTAButton href={offer.href} size="lg">
+              {offer.label}
             </CTAButton>
-            <CTAButton href="/pricing" variant="secondary" size="lg">
-              See pricing
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Book a call
             </CTAButton>
           </div>
         </div>
@@ -204,11 +238,11 @@ export default async function SubpagePage({ params }: Params) {
             retainer, twelve months.
           </Body>
           <div className="flex flex-col sm:flex-row gap-3">
-            <CTAButton href="/contact" size="lg">
-              Start the conversation →
+            <CTAButton href={offer.href} size="lg">
+              {offer.label}
             </CTAButton>
-            <CTAButton href="/pricing" variant="secondary" size="lg">
-              See pricing
+            <CTAButton href="/contact" variant="secondary" size="lg">
+              Book a call
             </CTAButton>
           </div>
         </div>
