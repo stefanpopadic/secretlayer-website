@@ -18,9 +18,9 @@ export default function Home() {
         <GridBg variant="dark" />
         <div className="relative">
           <BrandBar label="Secret Layer" number="The warm-up layer" className="mb-5" />
-          <Display className="max-w-[1200px]">
-            The <em>middle</em> of your funnel <br className="hidden lg:block" />
-            B2B companies are <em>missing</em>.
+          <Display className="max-w-[1400px]">
+            The <em>middle</em> of your funnel B2B <br className="hidden lg:block" />
+            companies are <em>missing</em>.
           </Display>
           <div className="mt-12 grid lg:grid-cols-[1fr_auto] gap-8 items-end">
             <Body size="xl" className="text-bone/75 max-w-[620px]">
