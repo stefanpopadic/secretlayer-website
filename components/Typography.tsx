@@ -13,7 +13,7 @@ export function Display({ as: Tag = "h1", className, children }: DisplayProps) {
       className={cn(
         "font-display font-normal uppercase leading-[100%] tracking-[-0.035em]",
         "text-[clamp(2.8rem,7.2vw,7rem)]",
-        "[&_em]:italic [&_em]:tracking-[-2px] [&_em]:leading-[100%]",
+        "[&_em]:not-italic [&_em]:tracking-[-2px] [&_em]:leading-[100%]",
         className
       )}
     >
@@ -28,7 +28,7 @@ export function Headline({ as: Tag = "h2", className, children }: DisplayProps) 
       className={cn(
         "font-display font-normal uppercase leading-[100%] tracking-[-0.03em]",
         "text-[clamp(1.8rem,4.4vw,3.8rem)]",
-        "[&_em]:italic [&_em]:leading-[100%]",
+        "[&_em]:not-italic [&_em]:leading-[100%]",
         className
       )}
     >
@@ -43,7 +43,7 @@ export function MidHeadline({ as: Tag = "h2", className, children }: DisplayProp
       className={cn(
         "font-display font-normal uppercase leading-[100%] tracking-[-0.025em]",
         "text-[clamp(1.5rem,3.2vw,2.8rem)]",
-        "[&_em]:italic [&_em]:leading-[100%]",
+        "[&_em]:not-italic [&_em]:leading-[100%]",
         className
       )}
     >
@@ -62,7 +62,7 @@ export function SmallHeadline({
       className={cn(
         "font-display font-normal uppercase leading-[100%] tracking-[-0.02em]",
         "text-[clamp(1.2rem,2.2vw,2.2rem)]",
-        "[&_em]:italic [&_em]:leading-[100%]",
+        "[&_em]:not-italic [&_em]:leading-[100%]",
         className
       )}
     >
