@@ -17,7 +17,7 @@ export function PillTag({ children, variant = "dark", className }: PillTagProps)
   return (
     <span
       className={cn(
-        "inline-flex items-center border rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] font-medium",
+        "inline-flex self-start items-center border rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] font-medium w-fit",
         styles[variant],
         className
       )}

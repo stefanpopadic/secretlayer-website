@@ -61,7 +61,7 @@ export function SmallHeadline({
     <Tag
       className={cn(
         "font-display font-normal uppercase leading-[100%] tracking-[-0.02em]",
-        "text-[clamp(2.25rem,4.5vw,4rem)]",
+        "text-[clamp(1.4rem,2vw,1.875rem)]",
         "[&_em]:not-italic [&_em]:leading-[100%]",
         className
       )}
