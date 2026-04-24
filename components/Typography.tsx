@@ -41,8 +41,8 @@ export function MidHeadline({ as: Tag = "h2", className, children }: DisplayProp
   return (
     <Tag
       className={cn(
-        "font-serif font-normal leading-[100%] tracking-[-0.025em]",
-        "text-[clamp(1.875rem,4vw,3.5rem)]",
+        "font-display font-normal uppercase leading-[100%] tracking-[-0.025em]",
+        "text-[clamp(1.5rem,3.2vw,2.8rem)]",
         "[&_em]:italic [&_em]:leading-[100%]",
         className
       )}
@@ -60,8 +60,8 @@ export function SmallHeadline({
   return (
     <Tag
       className={cn(
-        "font-serif font-normal leading-[100%] tracking-[-0.02em]",
-        "text-[clamp(1.5rem,2.75vw,2.75rem)]",
+        "font-display font-normal uppercase leading-[100%] tracking-[-0.02em]",
+        "text-[clamp(1.2rem,2.2vw,2.2rem)]",
         "[&_em]:italic [&_em]:leading-[100%]",
         className
       )}
