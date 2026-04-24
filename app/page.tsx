@@ -108,9 +108,9 @@ export default function Home() {
       {/* 3. Math — 100 visitors */}
       <Section variant="ink">
         <BrandBar label="The math" number="02 / 12" className="mb-4" />
-        <MidHeadline className="max-w-[900px]">
+        <Headline className="max-w-[1200px]">
           100 visitors hit your site. <em>1</em> buys. <em>99</em> leave.
-        </MidHeadline>
+        </Headline>
         <Body size="lg" className="text-bone/70 mt-6 max-w-[640px]">
           Industry average B2B conversion is 1–2%. For the other 98–99 visitors, the current
           internet has no middle layer — so they disappear.
