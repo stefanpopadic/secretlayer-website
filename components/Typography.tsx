@@ -27,7 +27,7 @@ export function Headline({ as: Tag = "h2", className, children }: DisplayProps) 
     <Tag
       className={cn(
         "font-display font-normal uppercase leading-[100%] tracking-[-0.03em]",
-        "text-[clamp(1.8rem,4.4vw,3.8rem)]",
+        "text-[clamp(2.4rem,6vw,5.5rem)]",
         "[&_em]:not-italic [&_em]:leading-[100%]",
         className
       )}
