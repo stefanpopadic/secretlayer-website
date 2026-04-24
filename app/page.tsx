@@ -36,13 +36,7 @@ export default function Home() {
               </CTAButton>
             </div>
           </div>
-          <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 border-t border-bone/10 pt-8">
-            <div>
-              <Eyebrow>Guarantee</Eyebrow>
-              <p className="mt-2 font-serif text-[22px] leading-[1.2] tracking-[-0.015em]">
-                10 leads / 90 days
-              </p>
-            </div>
+          <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-bone/10 pt-8">
             <div>
               <Eyebrow>Team</Eyebrow>
               <p className="mt-2 font-serif text-[22px] leading-[1.2] tracking-[-0.015em]">
@@ -364,43 +358,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* 9. Guarantee */}
-      <Section variant="ink" className="overflow-hidden">
-        <GridBg variant="dark" />
-        <div className="relative flex flex-col items-center text-center gap-8">
-          <BrandBar label="The guarantee" number="08 / 12" />
-          <Display as="h2" className="max-w-[1100px]">
-            <em>10 qualified leads</em> in 90 days, <br className="hidden lg:block" />
-            or we <em>work free</em>.
-          </Display>
-          <Body size="xl" className="text-bone/75 max-w-[720px] mx-auto">
-            Miss the mark at 90 days, we work free until we hit it. Miss it at 180 days, you get
-            a full refund plus a penalty on top. The only warm-up agency priced on outcomes, not
-            hours.
-          </Body>
-          <div className="grid sm:grid-cols-3 gap-8 mt-8 text-left max-w-[900px] w-full">
-            <div className="border-t border-bone/10 pt-5">
-              <Eyebrow>Day 0</Eyebrow>
-              <p className="mt-2 font-serif text-[24px] leading-[1.15] tracking-[-0.02em]">
-                Kickoff. Setup starts.
-              </p>
-            </div>
-            <div className="border-t border-flame/40 pt-5">
-              <Eyebrow className="text-flame">Day 90</Eyebrow>
-              <p className="mt-2 font-serif text-[24px] leading-[1.15] tracking-[-0.02em] text-flame">
-                10 qualified leads — or we work free.
-              </p>
-            </div>
-            <div className="border-t border-bone/10 pt-5">
-              <Eyebrow>Day 180</Eyebrow>
-              <p className="mt-2 font-serif text-[24px] leading-[1.15] tracking-[-0.02em]">
-                Still short? Full refund + penalty.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
-
       {/* 10. Pricing preview */}
       <Section variant="cream">
         <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-end mb-16">
@@ -434,7 +391,6 @@ export default function Home() {
                 "Full attribution stack",
                 "2 humans + AI team",
                 "Monthly outcome reviews",
-                "90-day lead guarantee",
               ].map((i) => (
                 <div key={i} className="flex gap-3 text-[15px] text-bone/85">
                   <span className="mt-[9px] h-[3px] w-[3px] rounded-full bg-flame shrink-0" />
@@ -549,9 +505,6 @@ export default function Home() {
               Get in touch
             </CTAButton>
           </div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-bone/40 mt-4">
-            10 qualified leads in 90 days — or we work free.
-          </p>
         </div>
       </Section>
     </>

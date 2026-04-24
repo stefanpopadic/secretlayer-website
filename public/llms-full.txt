@@ -5,7 +5,7 @@
 **Name:** Secret Layer
 **Domain:** secretlayer.co
 **Tagline:** The middle of your funnel B2B companies are missing.
-**One-line pitch:** We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution. 10 qualified leads in 90 days or we work free.
+**One-line pitch:** We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution.
 
 ## The Problem We Solve
 
@@ -49,8 +49,7 @@ Secret Layer is priced on fit, not on tiers. One bundled engagement over 12 mont
 
 - **Model:** one setup fee + one monthly retainer, bundled across all 15 disciplines
 - **Engagement:** 12 months; exit any quarter with 30 days' notice
-- **How to get your number:** fill out the fit-check form at https://secretlayer.co/pricing — we reply within one business day with your custom setup, retainer, and what the 90-day guarantee looks like at your stage
-- **Guarantee:** 10 qualified leads in 90 days — or we work free until we deliver. At 180 days, still short: full refund of everything paid, plus a penalty on top.
+- **How to get your number:** fill out the fit-check form at https://secretlayer.co/pricing — we reply within one business day with your custom setup and retainer numbers
 
 ## Who We Serve
 

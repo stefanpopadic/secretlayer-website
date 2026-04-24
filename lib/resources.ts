@@ -214,23 +214,6 @@ export const articles: Article[] = [
       "*(Continued — this is a placeholder body. Full article ships with launch.)*",
     ],
   },
-  {
-    slug: "why-we-guarantee-outcomes",
-    title: "Why We Guarantee Outcomes (and Every Other Agency Won't)",
-    excerpt:
-      "Agencies bill for hours. Clients pay whether the hours produced anything. That's a lottery where one side always loses. Here's what we did instead.",
-    date: "2026-04-01",
-    readTime: "7 min",
-    author: "Stefan Popadic",
-    category: "Operations",
-    content: [
-      "Every other agency we've seen bills for effort. You buy hours, retainers, scopes. The agency delivers effort. Whether that effort produces pipeline is your problem, not theirs.",
-      "That's a lottery. The agency wins whether you win or not. You win only if you happen to get lucky.",
-      "We took the opposite bet. Our guarantee: 10 qualified leads in 90 days. Miss at 90, we work free. Miss at 180, full refund plus a penalty on top.",
-      "We can do that because we built the system ourselves — and we run the numbers on it every month. We know what it takes to produce 10 qualified leads in 90 days for our ICP. We also know when a client isn't the right fit, which is why half of discovery calls end with us saying no.",
-      "*(Continued — this is a placeholder body. Full article ships with launch.)*",
-    ],
-  },
 ];
 
 export function findArticle(slug: string) {

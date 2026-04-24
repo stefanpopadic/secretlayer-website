@@ -5,7 +5,6 @@ import { BrandBar } from "@/components/BrandBar";
 import { Display, Headline, SmallHeadline, Eyebrow, Body } from "@/components/Typography";
 import { CompareColumn } from "@/components/CompareColumn";
 import { CTAButton } from "@/components/CTAButton";
-import { StanzaLine } from "@/components/StanzaLine";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 
@@ -19,12 +18,7 @@ const faqs = [
   {
     question: "Why only two people?",
     answer:
-      "Because AI lets two operators ship what used to take ten. Small team, zero coordination overhead, senior hands on every deliverable — and we can guarantee outcomes because we control the whole build.",
-  },
-  {
-    question: "Why guarantee outcomes?",
-    answer:
-      "Because every other agency bills for time, not results. We think that's broken. If we can't produce 10 qualified leads in 90 days, the client didn't buy anything — so they shouldn't pay.",
+      "Because AI lets two operators ship what used to take ten. Small team, zero coordination overhead, senior hands on every deliverable.",
   },
   {
     question: "Who do you work with?",
@@ -136,28 +130,6 @@ export default function AboutPage() {
               </Body>
             </div>
           ))}
-        </div>
-      </Section>
-
-      {/* Why we guarantee */}
-      <Section variant="charcoal">
-        <BrandBar label="Why we guarantee" number="03 / 04" className="mb-4" />
-        <Headline className="max-w-[960px]">
-          Because billing for <em>effort</em> is a broken model.
-        </Headline>
-        <div className="mt-12 max-w-[780px] flex flex-col gap-5">
-          <StanzaLine className="text-bone/80">
-            Agencies charge for hours. The client pays whether or not the hours produced
-            anything. That&apos;s a lottery where only one side loses.
-          </StanzaLine>
-          <StanzaLine className="text-bone/80">
-            Our bet: <em>if we can&apos;t produce 10 qualified leads in 90 days, we work free
-            until we do.</em> Miss at 180 days — full refund plus a penalty on top.
-          </StanzaLine>
-          <StanzaLine className="text-bone/80">
-            We&apos;re the only warm-up agency that will sign that. Because we built the system
-            ourselves — and we run the numbers on it every month.
-          </StanzaLine>
         </div>
       </Section>
 

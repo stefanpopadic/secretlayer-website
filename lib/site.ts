@@ -4,8 +4,7 @@ export const site = {
   url: "https://secretlayer.co",
   tagline: "The middle of your funnel B2B companies are missing.",
   description:
-    "We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution. 10 qualified leads in 90 days or we work free.",
-  guarantee: "10 qualified leads in 90 days or we work free.",
+    "We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution.",
   pricing: {
     setup: 15000,
     setupLabel: "$15,000",
@@ -15,7 +14,6 @@ export const site = {
     total: 80000,
     totalLabel: "$80,000",
     engagement: "12 months",
-    penaltyLabel: "$2,000",
   },
   founders: ["Stefan Popadic", "Nenad Popadic"],
   social: {

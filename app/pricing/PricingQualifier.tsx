@@ -594,7 +594,6 @@ function Results({ answers, results }: { answers: Answers; results: Computed }) 
               "Weekly working sessions",
               "Dedicated Slack channel",
               "Monthly outcome reviews",
-              "90-day lead guarantee",
               "Quarterly strategy resets",
               "Full attribution dashboard",
             ].map((item) => (
@@ -642,24 +641,6 @@ function Results({ answers, results }: { answers: Answers; results: Computed }) 
               value={site.pricing.engagement}
               sub="Exit any quarter, 30d notice"
             />
-          </div>
-          <div className="border-t border-flame/20 pt-8 grid sm:grid-cols-2 gap-5">
-            <div className="flex flex-col gap-2">
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
-                Day 90
-              </span>
-              <p className="text-[15px] leading-[1.5] text-bone/80">
-                10 qualified leads or we work free until we hit them.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2">
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-flame">
-                Day 180
-              </span>
-              <p className="text-[15px] leading-[1.5] text-bone/80">
-                Still short? Full refund, plus a {site.pricing.penaltyLabel} penalty on top.
-              </p>
-            </div>
           </div>
         </div>
       )}

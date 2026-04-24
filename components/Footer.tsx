@@ -18,9 +18,6 @@ export function Footer() {
             <p className="font-serif text-[22px] leading-[1.25] tracking-[-0.015em] text-bone/75 max-w-[380px]">
               {site.tagline}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-flame font-medium">
-              {site.guarantee}
-            </p>
           </div>
 
           <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-8">

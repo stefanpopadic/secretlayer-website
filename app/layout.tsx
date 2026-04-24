@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     template: "%s · Secret Layer",
   },
   description:
-    "We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution. 10 qualified leads in 90 days or we work free.",
+    "We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -56,13 +56,12 @@ export const metadata: Metadata = {
     siteName: "Secret Layer",
     title: "Secret Layer — The warm-up layer B2B funnels are missing",
     description:
-      "We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution. 10 qualified leads in 90 days or we work free.",
+      "We build the middle of your funnel. Website, AI tools, content, SEO, AEO, email nurture, attribution.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Secret Layer — The warm-up layer B2B funnels are missing",
-    description:
-      "We build the middle of your funnel. 10 qualified leads in 90 days or we work free.",
+    description: "We build the middle of your funnel.",
   },
   robots: { index: true, follow: true },
 };

@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Case studies ship Q3 2026. First Secret Layer guarantees close in Q2; full receipts publish as each 90-day mark passes.",
+    "Case studies ship Q3 2026. First Secret Layer engagements kick off in Q2; full receipts publish as each reaches its first outcome milestones.",
 };
 
 const upcoming = [
@@ -53,7 +53,8 @@ export default function CaseStudiesPage() {
           </Display>
           <Body size="xl" className="text-bone/75 mt-10 max-w-[700px]">
             Secret Layer started taking clients in Q2 2026. Case studies with real numbers —
-            not cherry-picked highlights — publish as each 90-day guarantee closes.
+            not cherry-picked highlights — publish as each engagement hits its first outcome
+            milestones.
           </Body>
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
             <CTAButton href="/resources/tools/funnel-audit" size="lg">

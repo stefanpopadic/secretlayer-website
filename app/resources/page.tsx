@@ -173,7 +173,7 @@ export default function ResourcesPage() {
         </Headline>
         <Body size="lg" className="text-bone/70 mt-6 max-w-[640px]">
           First Secret Layer clients start in Q2 2026. Full case studies — with receipts —
-          publish as the first 90-day guarantees close.
+          publish as each engagement hits its first outcome milestones.
         </Body>
         <div className="mt-12">
           <CTAButton href="/resources/case-studies" variant="secondary">

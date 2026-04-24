@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Why a 12-month engagement?",
     answer:
-      "Because the middle of the funnel is a compound asset. Month 1 is setup. Month 3 is the first guarantee checkpoint. Months 4–12 are where content, AEO, and nurture actually compound. Anything shorter and we'd charge for setup without the payoff.",
+      "Because the middle of the funnel is a compound asset. Month 1 is setup. Months 2–12 are where content, AEO, and nurture actually compound. Anything shorter and we'd charge for setup without the payoff.",
   },
   {
     question: "What if I cancel?",
@@ -39,12 +39,7 @@ const faqs = [
   {
     question: "What counts as a qualified lead?",
     answer:
-      "A lead with a verified work email, matched to your ICP, with demonstrated intent (tool use, magnet download, or direct inquiry). We define ICP together in week 1 and measure against that definition from day 90 onward.",
-  },
-  {
-    question: "What happens if we miss the guarantee?",
-    answer:
-      "Day 90 miss: we work free (no new invoices) until we hit 10 qualified leads. Day 180 miss: full refund of everything you've paid, plus a penalty on top. You're made whole if we fail — we carry the risk.",
+      "A lead with a verified work email, matched to your ICP, with demonstrated intent (tool use, magnet download, or direct inquiry). We define ICP together in week 1 and measure against that definition from then on.",
   },
   {
     question: "Can I just buy one service?",
@@ -196,7 +191,6 @@ export default function PricingPage() {
               "Weekly working sessions",
               "Dedicated Slack channel",
               "Monthly outcome reviews",
-              "90-day lead guarantee",
               "Quarterly strategy resets",
               "Full attribution dashboard",
             ].map((item) => (
@@ -205,39 +199,6 @@ export default function PricingPage() {
                 <span>{item}</span>
               </div>
             ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Guarantee */}
-      <Section variant="charcoal" className="overflow-hidden">
-        <BrandBar label="The guarantee" number="Priced on outcomes" className="mb-4" />
-        <Headline className="max-w-[1100px]">
-          We carry the <em>risk</em>. Not you.
-        </Headline>
-        <div className="mt-16 grid sm:grid-cols-3 gap-5">
-          <div className="border border-bone/10 rounded-[4px] p-8 flex flex-col gap-3">
-            <Eyebrow>Day 0</Eyebrow>
-            <SmallHeadline as="h3">Kickoff.</SmallHeadline>
-            <Body size="sm" className="text-bone/70">
-              Setup starts. Strategy, design, dev, and content all run in parallel from week 1.
-            </Body>
-          </div>
-          <div className="border border-flame/40 bg-flame/[0.06] rounded-[4px] p-8 flex flex-col gap-3">
-            <Eyebrow className="text-flame">Day 90</Eyebrow>
-            <SmallHeadline as="h3" className="text-flame">
-              10 qualified leads — or free.
-            </SmallHeadline>
-            <Body size="sm" className="text-bone/70">
-              Miss the mark? We work free — no new invoices — until we hit it.
-            </Body>
-          </div>
-          <div className="border border-bone/10 rounded-[4px] p-8 flex flex-col gap-3">
-            <Eyebrow>Day 180</Eyebrow>
-            <SmallHeadline as="h3">Full refund + penalty.</SmallHeadline>
-            <Body size="sm" className="text-bone/70">
-              Still short of 10 leads? Everything paid gets refunded, plus a penalty on top.
-            </Body>
           </div>
         </div>
       </Section>
