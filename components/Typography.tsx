@@ -97,10 +97,10 @@ type BodyProps = {
 
 export function Body({ className, children, size = "base" }: BodyProps) {
   const sizes = {
-    sm: "text-base",
-    base: "text-[18px] leading-[1.55]",
-    lg: "text-[20px] leading-[1.55]",
-    xl: "text-[22px] leading-[1.6]",
+    sm: "text-[18px] leading-[1.4]",
+    base: "text-[18px] leading-[1.4]",
+    lg: "text-[18px] leading-[1.4]",
+    xl: "text-[18px] leading-[1.4]",
   };
   return (
     <p
