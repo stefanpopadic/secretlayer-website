@@ -70,9 +70,9 @@ export default function Home() {
         <div className="grid lg:grid-cols-[auto_1fr] gap-16 lg:gap-24 items-start">
           <div className="lg:sticky lg:top-28 flex flex-col gap-6 max-w-[420px]">
             <BrandBar label="The problem" number="01 / 12" variant="cream" />
-            <Headline>
+            <MidHeadline>
               Today your funnel has <em>two outcomes</em>.
-            </Headline>
+            </MidHeadline>
             <Body size="lg" className="text-ink/75">
               Buyer ready now. Or buyer gone forever. Nothing in between. That&apos;s why your
               pipeline feels thin even when traffic looks fine.
