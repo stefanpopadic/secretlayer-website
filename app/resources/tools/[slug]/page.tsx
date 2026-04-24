@@ -10,6 +10,7 @@ import { ToolForm } from "./ToolForm";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { tools, findTool } from "@/lib/resources";
 import { site } from "@/lib/site";
+import { getJurisdiction } from "@/lib/geo.server";
 
 export async function generateStaticParams() {
   return tools.map((t) => ({ slug: t.slug }));
@@ -31,6 +32,7 @@ export default async function ToolPage({ params }: Params) {
   const { slug } = await params;
   const tool = findTool(slug);
   if (!tool) notFound();
+  const jurisdiction = await getJurisdiction();
 
   return (
     <>
@@ -67,7 +69,7 @@ export default async function ToolPage({ params }: Params) {
             </Body>
           </div>
           <div className="lg:sticky lg:top-28">
-            <ToolForm tool={tool} />
+            <ToolForm tool={tool} jurisdiction={jurisdiction} />
           </div>
         </div>
       </Section>

@@ -5,6 +5,17 @@ import { cn } from "@/lib/cn";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+/**
+ * Consent decision:
+ * This is a purely transactional/sales inquiry form — the submission is a
+ * one-to-one reply only, with no marketing nurture sequence attached. Under
+ * GDPR/UK-GDPR and US state law this falls under legitimate interest / service
+ * communication, so no ConsentBlock or explicit opt-in checkbox is required —
+ * regardless of jurisdiction. If this form ever feeds a marketing sequence,
+ * switch to ConsentBlock + pass `jurisdiction` in from the page.
+ *
+ * TODO: log consent to backend (jurisdiction-agnostic for now — transactional)
+ */
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
 
@@ -72,6 +83,16 @@ export function ContactForm() {
       </button>
       <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink/40 mt-2">
         We respond within one business day · No sales sequences
+      </p>
+      <p className="font-mono text-[11px] leading-[1.5] tracking-[0.02em] text-ink/60">
+        We&apos;ll only use this to reply to your inquiry. See our{" "}
+        <a
+          href="/privacy"
+          className="underline underline-offset-2 text-ink hover:text-flame-dark transition-colors"
+        >
+          Privacy Policy
+        </a>
+        .
       </p>
     </form>
   );

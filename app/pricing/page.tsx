@@ -8,6 +8,7 @@ import { PillTag } from "@/components/PillTag";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 import { PricingQualifier } from "./PricingQualifier";
+import { getJurisdiction } from "@/lib/geo.server";
 
 export const metadata: Metadata = {
   title: "See if this is for you",
@@ -81,7 +82,8 @@ const modules = [
   },
 ];
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const jurisdiction = await getJurisdiction();
   return (
     <>
       <BreadcrumbJsonLd
@@ -209,7 +211,7 @@ export default function PricingPage() {
         <MidHeadline className="max-w-[900px] mb-10">
           Answer seven questions. See your <em>fit</em> — and your ROI.
         </MidHeadline>
-        <PricingQualifier />
+        <PricingQualifier jurisdiction={jurisdiction} />
       </Section>
 
       {/* FAQ */}

@@ -3,14 +3,29 @@
 import { useState, FormEvent } from "react";
 import { cn } from "@/lib/cn";
 import type { Tool } from "@/lib/resources";
+import type { Jurisdiction } from "@/lib/geo";
+import { needsExplicitConsent } from "@/lib/geo";
+import { ConsentBlock } from "@/components/ConsentBlock";
 
 type Status = "idle" | "submitting" | "processing" | "success";
 
-export function ToolForm({ tool }: { tool: Tool }) {
+export function ToolForm({
+  tool,
+  jurisdiction,
+}: {
+  tool: Tool;
+  jurisdiction: Jurisdiction;
+}) {
   const [status, setStatus] = useState<Status>("idle");
+  const [marketingConsent, setMarketingConsent] = useState(false);
+  const requiresConsent = needsExplicitConsent(jurisdiction);
+  const consentBlocksSubmit = requiresConsent && !marketingConsent;
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (consentBlocksSubmit) return;
+    // TODO: log consent to backend (jurisdiction, marketingConsent, timestamp, IP)
+    // TODO: trigger double opt-in email (UK/EU) or single-step delivery (US/CA/OTHER)
     setStatus("submitting");
     await new Promise((r) => setTimeout(r, 700));
     setStatus("processing");
@@ -78,14 +93,21 @@ export function ToolForm({ tool }: { tool: Tool }) {
         />
       </label>
 
+      <ConsentBlock
+        jurisdiction={jurisdiction}
+        marketingConsent={marketingConsent}
+        onConsentChange={setMarketingConsent}
+        variant="dark"
+      />
+
       <button
         type="submit"
-        disabled={status !== "idle"}
+        disabled={status !== "idle" || consentBlocksSubmit}
         className={cn(
           "mt-2 inline-flex items-center justify-center gap-2 font-sans font-medium tracking-[-0.01em] rounded-[3px] px-6 py-3.5 text-[15px] transition-colors border",
-          status === "idle"
+          status === "idle" && !consentBlocksSubmit
             ? "bg-flame text-ink border-flame hover:bg-flame-dark hover:text-bone hover:border-flame-dark"
-            : "bg-flame/40 text-ink/60 border-flame/40 cursor-wait"
+            : "bg-flame/40 text-ink/60 border-flame/40 cursor-not-allowed"
         )}
       >
         {status === "idle" && `${tool.submitLabel}`}
@@ -93,9 +115,11 @@ export function ToolForm({ tool }: { tool: Tool }) {
         {status === "processing" && "Running audit…"}
       </button>
 
-      <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-bone/40">
-        No newsletter opt-in · Report emailed once · Then we&apos;re out of your inbox
-      </p>
+      {consentBlocksSubmit && (
+        <p className="font-mono text-[11px] leading-[1.5] text-bone/55">
+          You must agree to receive the email series to continue.
+        </p>
+      )}
     </form>
   );
 }

@@ -2,6 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { site } from "@/lib/site";
+import type { Jurisdiction } from "@/lib/geo";
+import { needsExplicitConsent } from "@/lib/geo";
+import { ConsentBlock } from "@/components/ConsentBlock";
 
 type Answers = {
   revenue: string;
@@ -114,11 +117,18 @@ const initial: Answers = {
   company: "",
 };
 
-export function PricingQualifier() {
+export function PricingQualifier({
+  jurisdiction,
+}: {
+  jurisdiction: Jurisdiction;
+}) {
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<Answers>(initial);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
+  const requiresConsent = needsExplicitConsent(jurisdiction);
+  const consentBlocksSubmit = requiresConsent && !marketingConsent;
 
   const step = steps[idx];
   const total = steps.length;
@@ -140,6 +150,9 @@ export function PricingQualifier() {
 
   function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (consentBlocksSubmit) return;
+    // TODO: log consent to backend (jurisdiction, marketingConsent, timestamp, IP)
+    // TODO: trigger double opt-in email (UK/EU) or single-step delivery (US/CA/OTHER)
     setSubmitting(true);
     setTimeout(() => {
       setSubmitting(false);
@@ -299,17 +312,29 @@ export function PricingQualifier() {
               onChange={(v) => update("email", v)}
               required
             />
+            <ConsentBlock
+              jurisdiction={jurisdiction}
+              marketingConsent={marketingConsent}
+              onConsentChange={setMarketingConsent}
+              variant="dark"
+            />
             <button
               type="submit"
-              disabled={submitting || !answers.email || !answers.name}
+              disabled={
+                submitting ||
+                !answers.email ||
+                !answers.name ||
+                consentBlocksSubmit
+              }
               className="self-start inline-flex items-center gap-2 px-7 py-4 text-[15px] font-medium rounded-[3px] bg-flame text-ink hover:bg-flame-dark hover:text-bone border border-flame hover:border-flame-dark disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
             >
               {submitting ? "Running the math…" : "Show my fit report →"}
             </button>
-            <p className="text-[12px] leading-[1.5] text-bone/50">
-              No spam. We send one email with your fit report and a short note on next steps. You
-              can reply directly to that email if you want to talk.
-            </p>
+            {consentBlocksSubmit && (
+              <p className="font-mono text-[11px] leading-[1.5] text-bone/55">
+                You must agree to receive the email series to continue.
+              </p>
+            )}
           </form>
         )}
       </div>
